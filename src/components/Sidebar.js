@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+//import { useLocation, Link } from 'react-router-dom';
 
 const Sidebar = () => {
-    const location = useLocation(); // Get the current location
+    //const location = useLocation(); // Get the current location
 
-    const isActive = (path) => location.pathname === path; // Check if the path matches the current location
+    //const isActive = (path) => location.pathname === path; // Check if the path matches the current location
 
 
     return (
@@ -26,9 +26,9 @@ const Sidebar = () => {
                                 <span>Gold Member</span>
                             </div>
                         </div>
-                        <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+                        <a href="/" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                         <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-                            <a href="#" class="dropdown-item preview-item">
+                            <a href="/" class="dropdown-item preview-item">
                                 <div class="preview-thumbnail">
                                     <div class="preview-icon bg-dark rounded-circle">
                                         <i class="mdi mdi-cog text-primary"></i>
@@ -39,7 +39,7 @@ const Sidebar = () => {
                                 </div>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
+                            <a href="/" class="dropdown-item preview-item">
                                 <div class="preview-thumbnail">
                                     <div class="preview-icon bg-dark rounded-circle">
                                         <i class="mdi mdi-onepassword  text-info"></i>
@@ -50,7 +50,7 @@ const Sidebar = () => {
                                 </div>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item preview-item">
+                            <a href="/" class="dropdown-item preview-item">
                                 <div class="preview-thumbnail">
                                     <div class="preview-icon bg-dark rounded-circle">
                                         <i class="mdi mdi-calendar-today text-success"></i>
