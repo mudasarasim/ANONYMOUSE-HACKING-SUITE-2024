@@ -317,7 +317,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face1.jpg" alt="uhk" />
+                                                                <img src="assets/faces/face1.jpg" alt="uhk" />
                                                                 <span class="ps-2">Henry Klein</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -338,7 +338,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face2.jpg" alt="uuiii" />
+                                                                <img src="assets/faces/face2.jpg" alt="uuiii" />
                                                                 <span class="ps-2">Estella Bryan</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -359,7 +359,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face5.jpg" alt="hu" />
+                                                                <img src="assets/faces/face5.jpg" alt="hu" />
                                                                 <span class="ps-2">Lucy Abbott</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -380,7 +380,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face3.jpg" alt="yyy" />
+                                                                <img src="assets/faces/face3.jpg" alt="yyy" />
                                                                 <span class="ps-2">Peter Gill</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -401,7 +401,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face4.jpg" alt="hgjhk" />
+                                                                <img src="assets/faces/face4.jpg" alt="hgjhk" />
                                                                 <span class="ps-2">Sallie Reyes</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -431,7 +431,7 @@ const Dashboard = () => {
                                             <div class="preview-list">
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face6.jpg" alt="hgj" class="rounded-circle" />
+                                                        <img src="assets/faces/face6.jpg" alt="hgj" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -445,7 +445,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face8.jpg" alt="guy" class="rounded-circle" />
+                                                        <img src="assets/faces/face8.jpg" alt="guy" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -459,7 +459,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face9.jpg" alt="gjh" class="rounded-circle" />
+                                                        <img src="assets/faces/face9.jpg" alt="gjh" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -473,7 +473,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face11.jpg" alt="hgj" class="rounded-circle" />
+                                                        <img src="assets/faces/face11.jpg" alt="hgj" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
