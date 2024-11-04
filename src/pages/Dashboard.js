@@ -1,11 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 
 const Dashboard = () => {
-    const location = useLocation(); // Get the current location
-
+  
 
 
     return (
@@ -17,7 +15,7 @@ const Dashboard = () => {
                             <div class="ps-lg-3">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                                    <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn me-2 buy-now-btn border-0">Buy Now</a>
+                                    <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" rel="noreferrer" class="btn me-2 buy-now-btn border-0">Buy Now</a>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
@@ -350,7 +348,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face1.jpg" alt="image" />
+                                                                <img src="assets/images/faces/face1.jpg" alt="uhk" />
                                                                 <span class="ps-2">Henry Klein</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -371,7 +369,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face2.jpg" alt="image" />
+                                                                <img src="assets/images/faces/face2.jpg" alt="uuiii" />
                                                                 <span class="ps-2">Estella Bryan</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -392,7 +390,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face5.jpg" alt="image" />
+                                                                <img src="assets/images/faces/face5.jpg" alt="hu" />
                                                                 <span class="ps-2">Lucy Abbott</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -413,7 +411,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face3.jpg" alt="image" />
+                                                                <img src="assets/images/faces/face3.jpg" alt="yyy" />
                                                                 <span class="ps-2">Peter Gill</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -434,7 +432,7 @@ const Dashboard = () => {
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <img src="assets/images/faces/face4.jpg" alt="image" />
+                                                                <img src="assets/images/faces/face4.jpg" alt="hgjhk" />
                                                                 <span class="ps-2">Sallie Reyes</span>
                                                             </td>
                                                             <td> 02312 </td>
@@ -464,7 +462,7 @@ const Dashboard = () => {
                                             <div class="preview-list">
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face6.jpg" alt="image" class="rounded-circle" />
+                                                        <img src="assets/images/faces/face6.jpg" alt="hgj" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -478,7 +476,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face8.jpg" alt="image" class="rounded-circle" />
+                                                        <img src="assets/images/faces/face8.jpg" alt="guy" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -492,7 +490,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face9.jpg" alt="image" class="rounded-circle" />
+                                                        <img src="assets/images/faces/face9.jpg" alt="gjh" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -506,7 +504,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="preview-item border-bottom">
                                                     <div class="preview-thumbnail">
-                                                        <img src="assets/images/faces/face11.jpg" alt="image" class="rounded-circle" />
+                                                        <img src="assets/images/faces/face11.jpg" alt="hgj" class="rounded-circle" />
                                                     </div>
                                                     <div class="preview-item-content d-flex flex-grow">
                                                         <div class="flex-grow">
@@ -694,7 +692,7 @@ const Dashboard = () => {
                         </div>
                         <footer class="footer">
                             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
+                                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a href="https://www.bootstrapdash.com/" target="_blank" rel="noreferrer">BootstrapDash</a>. All rights reserved.</span>
                                 <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center"> <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted &amp; made with <i class="mdi mdi-heart text-danger"></i></span> <i class="mdi mdi-heart text-danger"></i></span>
                             </div>
                         </footer>
