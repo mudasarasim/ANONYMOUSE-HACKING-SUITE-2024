@@ -10,20 +10,20 @@ const Sidebar = () => {
     return (
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="../../index.html"><img src="../../assets/images/logo.svg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="../../index.html" style={{color: 'white', textDecoration: 'none ', fontWeight: 'bold'}}><img style={{width: '70px', height: '80px', marginTop: '90px', marginBottom: '50px'}} src="logo.png" alt="logo" />Anonymous</a>
                 <a class="sidebar-brand brand-logo-mini" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
-            <ul class="nav">
+            <ul class="nav" style={{marginTop: '38px'}}>
                 <li class="nav-item profile">
                     <div class="profile-desc">
                         <div class="profile-pic">
                             <div class="count-indicator">
-                                <img class="img-xs rounded-circle " src="../../assets/images/faces/face15.jpg" alt="jkkl" />
+                                <img class="img-xs rounded-circle " src="assets/faces/face15.jpg" alt="jkkl" />
                                 <span class="count bg-success"></span>
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                                <span>Gold Member</span>
+                                
                             </div>
                         </div>
                         <a href="/" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
