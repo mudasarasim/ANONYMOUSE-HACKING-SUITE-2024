@@ -10,10 +10,10 @@ const Sidebar = () => {
     return (
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="../../index.html" style={{color: 'white', textDecoration: 'none ', fontWeight: 'bold'}}><img style={{width: '70px', height: '80px', marginTop: '90px', marginBottom: '50px'}} src="logo.png" alt="logo" />Anonymous</a>
+                <a class="sidebar-brand brand-logo" href="../../index.html" style={{color: 'white', textDecoration: 'none ', fontWeight: 'bold'}}><img style={{width: '50px', height: '55px', marginTop: '50px', marginBottom: '50px'}} src="logo.png" alt="logo" />Anonymous</a>
                 <a class="sidebar-brand brand-logo-mini" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
-            <ul class="nav" style={{marginTop: '38px'}}>
+            <ul class="nav" style={{marginTop: '8px'}}>
                 <li class="nav-item profile">
                     <div class="profile-desc">
                         <div class="profile-pic">
@@ -66,7 +66,7 @@ const Sidebar = () => {
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navigation</span>
                 </li>
-                <li class="nav-item menu-items">
+                <li class="nav-item menu-items active">
                     <a class="nav-link" href="../../index.html">
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
@@ -77,79 +77,166 @@ const Sidebar = () => {
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
-                            <i class="mdi mdi-laptop"></i>
+                            <i class="mdi mdi-whatsapp" style={{color: 'green'}}></i>
                         </span>
-                        <span class="menu-title">Basic UI Elements</span>
+                        <span class="menu-title">WhatsApp Hacking </span>
                         <i class="menu-arrow"></i>
                     </a>
+                    
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">WhatsApp Account Hacking </a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/forms/basic_elements.html">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#basic" aria-expanded="false" aria-controls="basic">
                         <span class="menu-icon">
-                            <i class="mdi mdi-playlist-play"></i>
+                            <i class="mdi mdi-facebook" style={{color: '#316FF6'}}></i>
                         </span>
-                        <span class="menu-title">Form Elements</span>
+                        <span class="menu-title">Facebook Hacking </span>
                         <i class="menu-arrow"></i>
                     </a>
+                    
+                    <div class="collapse" id="basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Facebook duplicate login access </a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/tables/basic-table.html">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#sic" aria-expanded="false" aria-controls="sic">
                         <span class="menu-icon">
-                            <i class="mdi mdi-table-large"></i>
+                            <i class="mdi mdi-instagram" style={{color: '#F56040'}}></i>
                         </span>
-                        <span class="menu-title">Tables</span>
+                        <span class="menu-title">Instagram Hacking </span>
                         <i class="menu-arrow"></i>
                     </a>
+                    
+                    <div class="collapse" id="sic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Instagram duplicate login access </a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/charts/chartjs.html">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#sc" aria-expanded="false" aria-controls="sc">
                         <span class="menu-icon">
-                            <i class="mdi mdi-chart-bar"></i>
+                        <i className="fa fa-map-marker" style={{ color: 'orange' }}></i>
+
                         </span>
-                        <span class="menu-title">Charts</span>
+                        <span class="menu-title">Location Tracking </span>
                         <i class="menu-arrow"></i>
                     </a>
+                    
+                    <div class="collapse" id="sc">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Current Location Tracking  </a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav-item menu-items active">
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#c" aria-expanded="false" aria-controls="c">
+                        <span class="menu-icon">
+                        <i className="fa fa-train" style={{ color: 'white' }}></i>
+
+                        </span>
+                        <span class="menu-title">Tracking IMEI</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    
+                    <div class="collapse" id="c">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Tracking IMEI Number</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#bc" aria-expanded="false" aria-controls="bc">
+                        <span class="menu-icon">
+                        <i className="fa fa-phone" style={{ color: 'green' }}></i>
+
+                        </span>
+                        <span class="menu-title">Tracking Sim Calls</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    
+                    <div class="collapse" id="bc">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Tracking Sims CALL Data</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
                         <span class="menu-icon">
                             <i class="mdi mdi-contacts"></i>
                         </span>
-                        <span class="menu-title">Icons</span>
+                        <span class="menu-title">Chat Inbox</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
                         <span class="menu-icon">
-                            <i class="mdi mdi-security"></i>
+                            <i class="mdi mdi-star"></i>
                         </span>
-                        <span class="menu-title">User Pages</span>
+                        <span class="menu-title">Starred Messages</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="auth">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 505 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../../pages/samples/blank-page.html"> Blank Page </a></li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../docs/documentation.html">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
                         <span class="menu-icon">
-                            <i class="mdi mdi-file-document"></i>
+                            <i class="fa fa-eye"></i>
                         </span>
-                        <span class="menu-title">Documentation</span>
+                        <span class="menu-title">Status, Reels, Story</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </span>
+                        <span class="menu-title">Location</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <span class="menu-title">Call History</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-microphone"></i>
+                        </span>
+                        <span class="menu-title"> Audio Voices</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-play"></i>
+                        </span>
+                        <span class="menu-title"> Videos</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-image"></i>
+                        </span>
+                        <span class="menu-title"> Photos</span>
+                        <i class="menu-arrow"></i>
                     </a>
                 </li>
             </ul>
