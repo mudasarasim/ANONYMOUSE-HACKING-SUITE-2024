@@ -1,9 +1,7 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-    const location = useLocation(); // Get the current location
-
+  
     
 
     return (
@@ -20,11 +18,11 @@ const Navbar = () => {
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown d-none d-lg-block">
-            <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
+            <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="/">+ Create New Project</a>
             <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
               <h6 class="p-3 mb-0">Projects</h6>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-file-outline text-primary"></i>
@@ -35,7 +33,7 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-web text-info"></i>
@@ -46,14 +44,14 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-layers text-danger"></i>
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                  <p class="preview-subject ellipsis mb-">Software Testing</p>
                 </div>
               </a>
               <div class="dropdown-divider"></div>
@@ -61,21 +59,21 @@ const Navbar = () => {
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-block">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/">
               <i class="mdi mdi-view-grid"></i>
             </a>
           </li>
           <li class="nav-item dropdown border-left">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="/" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="mdi mdi-email"></i>
               <span class="count bg-success"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="messageDropdown">
               <h6 class="p-3 mb-0">Messages</h6>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
-                  <img src="../../../assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic" />
+                  <img src="assets/images/faces/face4.jpg" alt="iii" class="rounded-circle profile-pic" />
                 </div>
                 <div class="preview-item-content">
                   <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
@@ -83,9 +81,9 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
-                  <img src="../../../assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic" />
+                  <img src="../../../assets/images/faces/face2.jpg" alt="jhkj" class="rounded-circle profile-pic" />
                 </div>
                 <div class="preview-item-content">
                   <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
@@ -93,9 +91,9 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
-                  <img src="../../../assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic" />
+                  <img src="../../../assets/images/faces/face3.jpg" alt="xx" class="rounded-circle profile-pic" />
                 </div>
                 <div class="preview-item-content">
                   <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
@@ -107,14 +105,14 @@ const Navbar = () => {
             </div>
           </li>
           <li class="nav-item dropdown border-left">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="/" data-bs-toggle="dropdown">
               <i class="mdi mdi-bell"></i>
               <span class="count bg-danger"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
               <h6 class="p-3 mb-0">Notifications</h6>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-calendar text-success"></i>
@@ -126,7 +124,7 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-cog text-danger"></i>
@@ -138,7 +136,7 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-link-variant text-warning"></i>
@@ -154,7 +152,7 @@ const Navbar = () => {
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link" id="profileDropdown" href="/" data-bs-toggle="dropdown">
               <div class="navbar-profile">
                 <img class="img-xs rounded-circle" src="../../../assets/images/faces/face15.jpg" alt="h" />
                 <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
@@ -164,7 +162,7 @@ const Navbar = () => {
             <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="profileDropdown">
               <h6 class="p-3 mb-0">Profile</h6>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-cog text-success"></i>
@@ -175,7 +173,7 @@ const Navbar = () => {
                 </div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
+              <a class="dropdown-item preview-item" href='/'>
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-dark rounded-circle">
                     <i class="mdi mdi-logout text-danger"></i>
