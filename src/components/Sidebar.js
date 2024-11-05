@@ -1,11 +1,25 @@
-import React from 'react';
-//import { useLocation, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
 const Sidebar = () => {
     //const location = useLocation(); // Get the current location
 
     //const isActive = (path) => location.pathname === path; // Check if the path matches the current location
 
+    const location = useLocation(); // Get the current location (route)
+    const [isLoading, setIsLoading] = useState(false);
+
+    // Track the active route by comparing with the current pathname
+    const isActive = (path) => location.pathname === path;
+
+    // Simulate loading state on route change (optional)
+    useEffect(() => {
+        setIsLoading(true);
+        const timeout = setTimeout(() => {
+            setIsLoading(false); // Simulate loading complete after 1 second
+        }, 1000); // Adjust the timeout as necessary
+        return () => clearTimeout(timeout); // Cleanup on component unmount
+    }, [location]);
 
     return (
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -66,15 +80,15 @@ const Sidebar = () => {
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navigation</span>
                 </li>
-                <li class="nav-item menu-items active">
-                    <a class="nav-link" href="../../index.html">
+                <li className={`nav-item menu-items ${isActive('/dashboard') ? 'active' : ''}`}>
+                    <Link class="nav-link" to={'/dashboard'}>
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
                         <span class="menu-title">Dashboard</span>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/whatsapp-hacking') ? 'active' : ''}`}>
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-whatsapp" style={{color: 'green'}}></i>
@@ -85,11 +99,11 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">WhatsApp Account Hacking </a></li>
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <Link class="nav-link" to={'/whatsapp-hacking'}>WhatsApp Account Hacking </Link></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/facebook-hacking') ? 'active' : ''}`}>
                     <a class="nav-link" data-bs-toggle="collapse" href="#basic" aria-expanded="false" aria-controls="basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-facebook" style={{color: '#316FF6'}}></i>
@@ -100,11 +114,11 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-40px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Facebook duplicate login access </a></li>
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/facebook-hacking'} class="nav-link">Facebook duplicate login access </Link></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/instagram-hacking') ? 'active' : ''}`}>
                     <a class="nav-link" data-bs-toggle="collapse" href="#sic" aria-expanded="false" aria-controls="sic">
                         <span class="menu-icon">
                             <i class="mdi mdi-instagram" style={{color: '#F56040'}}></i>
@@ -115,27 +129,11 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="sic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-40px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Instagram duplicate login access </a></li>
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/instagram-hacking'} class="nav-link">Instagram duplicate login access </Link></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#sc" aria-expanded="false" aria-controls="sc">
-                        <span class="menu-icon">
-                        <i className="fa fa-map-marker" style={{ color: 'orange' }}></i>
-
-                        </span>
-                        <span class="menu-title">Location Tracking </span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    
-                    <div class="collapse" id="sc">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Current Location Tracking  </a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/tracking-imei') ? 'active' : ''}`}>
                     <a class="nav-link" data-bs-toggle="collapse" href="#c" aria-expanded="false" aria-controls="c">
                         <span class="menu-icon">
                         <i className="fa fa-train" style={{ color: 'white' }}></i>
@@ -147,11 +145,11 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="c">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Tracking IMEI Number</a></li>
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <Link to={'/tracking-imei'} class="nav-link">Tracking IMEI Number</Link></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/tracking-sim-call') ? 'active' : ''}`}>
                     <a class="nav-link" data-bs-toggle="collapse" href="#bc" aria-expanded="false" aria-controls="bc">
                         <span class="menu-icon">
                         <i className="fa fa-phone" style={{ color: 'green' }}></i>
@@ -163,18 +161,34 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="bc">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-10px'}}> <a class="nav-link" href="../../pages/ui-features/buttons.html">Tracking Sims CALL Data</a></li>
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <Link class="nav-link" to={'/tracking-sim-call'}>Tracking Sims CALL Data</Link></li>
+                        </ul>
+                    </div>
+                </li>
+                <li className={`nav-item menu-items ${isActive('/tracking-location') ? 'active' : ''}`}>
+                    <a class="nav-link" data-bs-toggle="collapse" href="#sc" aria-expanded="false" aria-controls="sc">
+                        <span class="menu-icon">
+                        <i className="fa fa-map-marker" style={{ color: 'orange' }}></i>
+
+                        </span>
+                        <span class="menu-title">Location Tracking </span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    
+                    <div class="collapse" id="sc">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item" style={{marginLeft: '-10px'}}> <Link to={'/tracking-location'} class="nav-link">Current Location Tracking  </Link></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                    <Link class="nav-link" to={'/chatbox'}>
                         <span class="menu-icon">
                             <i class="mdi mdi-contacts"></i>
                         </span>
                         <span class="menu-title">Chat Inbox</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
@@ -236,6 +250,42 @@ const Sidebar = () => {
                             <i class="fa fa-image"></i>
                         </span>
                         <span class="menu-title"> Photos</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-file"></i>
+                        </span>
+                        <span class="menu-title"> Documents</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-clock-o"></i>
+                        </span>
+                        <span class="menu-title"> Time Limits</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-camera"></i>
+                        </span>
+                        <span class="menu-title">Camera / Gallery</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                        <span class="menu-icon">
+                            <i class="fa fa-file-export"></i>
+                        </span>
+                        <span class="menu-title">All Data Export</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
