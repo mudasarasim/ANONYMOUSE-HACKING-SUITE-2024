@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -7,20 +6,11 @@ const Sidebar = () => {
     //const isActive = (path) => location.pathname === path; // Check if the path matches the current location
 
     const location = useLocation(); // Get the current location (route)
-    const [isLoading, setIsLoading] = useState(false);
-
+    
     // Track the active route by comparing with the current pathname
     const isActive = (path) => location.pathname === path;
 
-    // Simulate loading state on route change (optional)
-    useEffect(() => {
-        setIsLoading(true);
-        const timeout = setTimeout(() => {
-            setIsLoading(false); // Simulate loading complete after 1 second
-        }, 1000); // Adjust the timeout as necessary
-        return () => clearTimeout(timeout); // Cleanup on component unmount
-    }, [location]);
-
+   
     return (
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
