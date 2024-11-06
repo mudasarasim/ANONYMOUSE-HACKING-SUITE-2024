@@ -22581,6 +22581,28 @@ select.border-dark.tt-hint:focus, .select2-container--default .select2-selection
   outline: 1px solid #0d0d0d;
 }
 
+.video-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.video-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.status-video:hover {
+  transform: scale(1.05);
+}
+
+
 .form-group label {
   font-size: 0.875rem;
   line-height: 1;

@@ -42,12 +42,12 @@ const TrackingLocation = () => {
                                     <div class="card">
                                         <div class="card-body">
                                             <h2 class="card-title"><i className='fa fa-map-marker'></i> Current Location Tracking</h2>
-                                            <iframe title='mmm' 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.0431168680315!2d2.335016815674377!3d48.86061107928767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8c1a3ec4d%3A0x6d227a18a8859444!2sLouvre%20Museum!5e0!3m2!1sen!2sus!4v1691045875813!5m2!1sen!2sus"
-        style={{width: '100%', height: '70vh'}}
-        allowfullscreen=""
-        loading="lazy"
-    ></iframe>
+                                            <iframe title='mmm'
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.0431168680315!2d2.335016815674377!3d48.86061107928767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8c1a3ec4d%3A0x6d227a18a8859444!2sLouvre%20Museum!5e0!3m2!1sen!2sus!4v1691045875813!5m2!1sen!2sus"
+                                                style={{ width: '100%', height: '70vh' }}
+                                                allowfullscreen=""
+                                                loading="lazy"
+                                            ></iframe>
                                         </div>
                                     </div>
                                 </div>

@@ -171,7 +171,7 @@ const Sidebar = () => {
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
+                <li className={`nav-item menu-items ${isActive('/chatbox') ? 'active' : ''}`}>
                     <Link class="nav-link" to={'/chatbox'}>
                         <span class="menu-icon">
                             <i class="mdi mdi-contacts"></i>
@@ -189,50 +189,50 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/status') ? 'active' : ''}`}>
+                    <Link to={'/status'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-eye"></i>
                         </span>
                         <span class="menu-title">Status, Reels, Story</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/location') ? 'active' : ''}`}>
+                    <Link to={'/location'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-map-marker"></i>
                         </span>
                         <span class="menu-title">Location</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/call-history') ? 'active' : ''}`}>
+                    <Link class="nav-link" to={'/call-history'}>
                         <span class="menu-icon">
                             <i class="fa fa-phone"></i>
                         </span>
                         <span class="menu-title">Call History</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/audio-voices') ? 'active' : ''}`}>
+                    <Link to={'/audio-voices'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-microphone"></i>
                         </span>
                         <span class="menu-title"> Audio Voices</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/videos') ? 'active' : ''}`}>
+                    <Link to={'/videos'} class="nav-link" >
                         <span class="menu-icon">
                             <i class="fa fa-play"></i>
                         </span>
                         <span class="menu-title"> Videos</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
