@@ -1,14 +1,59 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
-// import './Status.css'; // Import custom CSS
 
 const Status = () => {
-    const videos = [
-        { src: '1.mp4', title: 'Video 1' },
-        { src: '1.mp4', title: 'Video 2' },
-        { src: '1.mp4', title: 'Video 3' },
+    // Define the five different video arrays
+    const videos1 = [
+        { src: 'https://www.facebook.com/video1', title: 'FB Reel 1' },
+        { src: 'https://www.facebook.com/video2', title: 'FB Reel 2' },
+        { src: 'https://www.facebook.com/video3', title: 'FB Reel 3' },
+        { src: 'https://www.facebook.com/video4', title: 'FB Reel 4' },
+        { src: 'https://www.facebook.com/video5', title: 'FB Reel 5' }
     ];
+
+    const videos2 = [
+        { src: 'https://www.facebook.com/video6', title: 'FB Reel 1234' },
+        { src: 'https://www.facebook.com/video7', title: 'FB Reel 678' },
+        { src: 'https://www.facebook.com/video8', title: 'FB Reel 8' },
+        { src: 'https://www.facebook.com/video9', title: 'FB Reel 9' },
+        { src: 'https://www.facebook.com/video10', title: 'FB Reel 10' }
+    ];
+
+    const videos3 = [
+        { src: 'https://www.facebook.com/video11', title: 'FB Reel 11' },
+        { src: 'https://www.facebook.com/video12', title: 'FB Reel 12' },
+        { src: 'https://www.facebook.com/video13', title: 'FB Reel 13' },
+        { src: 'https://www.facebook.com/video14', title: 'FB Reel 14' },
+        { src: 'https://www.facebook.com/video15', title: 'FB Reel 15' }
+    ];
+
+    const videos4 = [
+        { src: 'https://www.facebook.com/video16', title: 'FB Reel 16' },
+        { src: 'https://www.facebook.com/video17', title: 'FB Reel 17' },
+        { src: 'https://www.facebook.com/video18', title: 'FB Reel 18' },
+        { src: 'https://www.facebook.com/video19', title: 'FB Reel 19' },
+        { src: 'https://www.facebook.com/video20', title: 'FB Reel 20' }
+    ];
+
+    const videos5 = [
+        { src: 'https://www.facebook.com/video21', title: 'FB Reel 21' },
+        { src: 'https://www.facebook.com/video22', title: 'FB Reel 22' },
+        { src: 'https://www.facebook.com/video23', title: 'FB Reel 23' },
+        { src: 'https://www.facebook.com/video24', title: 'FB Reel 24' },
+        { src: 'https://www.facebook.com/video25', title: 'FB Reel 25' }
+    ];
+
+    // Use state to determine which set of videos to display
+    const [videoId] = useState(1); // Assume videoId comes from props or route
+
+    // Map the video arrays to a condition
+    const videos = 
+        videoId === 1 ? videos1 :
+        videoId === 2 ? videos2 :
+        videoId === 3 ? videos3 :
+        videoId === 4 ? videos4 :
+        videos5;
 
     const videoRefs = useRef(videos.map(() => React.createRef()));
 

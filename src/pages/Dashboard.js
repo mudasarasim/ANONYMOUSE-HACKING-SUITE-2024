@@ -323,6 +323,7 @@ const Dashboard = () => {
                                     <div className="card">
                                         <h2 className='p-3'><i className='fa fa-map-marker'></i> Current Location</h2>
                                         <iframe
+                                        title='uty'
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462449.285138231!2d66.37242990787928!3d30.375321792177443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf5eac1f7687%3A0x67fb2e5a2d4284e6!2sPakistan!5e0!3m2!1sen!2sus!4v1699376633372!5m2!1sen!2sus"
                                             style={{width: '100%'}}
                                             height="450"

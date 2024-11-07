@@ -29,11 +29,11 @@ const WhatsappHacking = () => {
         {
             id: 3,
             country: "Canada",
-            city: "Toronto",
-            simCompany: "Rogers",
+            city: "Lahore",
+            simCompany: "Ufone",
             mobileNumber: "1122334455",
-            fromDate: "2023-05-01",
-            toDate: "2024-05-01"
+            fromDate: "2023-01-01",
+            toDate: "2024-01-01"
         },
         {
             id: 4,

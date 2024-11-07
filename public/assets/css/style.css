@@ -22716,7 +22716,9 @@ dl li {
   width: 1.5rem;
   margin-right: 0.5rem;
 }
-
+.form-select{
+  color: white!important;
+}
 .list-ticked li:before {
   content: "\f012d";
   color: #fc424a;
