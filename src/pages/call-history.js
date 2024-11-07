@@ -41,7 +41,7 @@ const CallHistory = () => {
                                 <div class="col-lg-12 grid-margin stretch-card">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h2 class="card-title"><i className='fa fa-phone'></i> Call History</h2>
+                                            <h2 class="card-title"><i className='fa fa-phone'></i> Calls History</h2>
                                             <div class="table-responsive">
                                                 <table class="table table-bordered">
                                                     <thead>

@@ -234,23 +234,23 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/photos') ? 'active' : ''}`}>
+                    <Link to={'/photos'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-image"></i>
                         </span>
                         <span class="menu-title"> Photos</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/documents') ? 'active' : ''}`}>
+                    <Link to={'/documents'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-file"></i>
                         </span>
                         <span class="menu-title"> Documents</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
@@ -261,14 +261,14 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <li className={`nav-item menu-items ${isActive('/camera') ? 'active' : ''}`}>
+                    <Link to={'/camera'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-camera"></i>
                         </span>
-                        <span class="menu-title">Camera / Gallery</span>
+                        <span class="menu-title"> Camera / Gallery</span>
                         <i class="menu-arrow"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">

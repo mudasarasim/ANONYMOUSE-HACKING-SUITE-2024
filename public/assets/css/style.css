@@ -22581,9 +22581,11 @@ select.border-dark.tt-hint:focus, .select2-container--default .select2-selection
   outline: 1px solid #0d0d0d;
 }
 
+
 .video-card {
   position: relative;
   overflow: hidden;
+  
 }
 
 

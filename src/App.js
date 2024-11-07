@@ -14,6 +14,8 @@ import Location from './pages/Location';
 import CallHistory from './pages/call-history';
 import AudioVoices from './pages/audio-voices';
 import Videos from './pages/Videos';
+import Photos from './pages/Photos';
+import Camera from './pages/camera';
 
 function App() {
   return (
@@ -32,7 +34,9 @@ function App() {
           <Route path="/call-history" element={<CallHistory />} />
           <Route path="/audio-voices" element={<AudioVoices />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/photos" element={<Photos />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/camera" element={<Camera />} />
           <Route path="/chatbox" element={<ChatBox />} />
         </Routes>
       </div>

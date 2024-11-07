@@ -1,9 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
+import WhatsAppUsageChart from '../components/WhatsAppUsageChart';
+import WeeklyAverageChart from '../components/WeeklyAverageChart';
+import { Link, useParams } from 'react-router-dom';
 
 const Dashboard = () => {
-  
+    const { id } = useParams(); // Get the user id from the URL
+
+    const [userData, setUserData] = useState({
+        chats: 220,
+        status: 86,
+        calls: 510,
+        location: "Pakistan",
+        device: {
+            name: "Samsung S20",
+            model: "samsung",
+            os: "10",
+            lastSeen: "2023-04-27 14:48:40",
+            batteryLevel: "98%",
+            wifiStatus: "On",
+            currentDevice: "Pakistan WhatsApp"
+        }
+    });
+
+    // Simulate changing device info based on user id
+    useEffect(() => {
+        // You can simulate fetching data based on user id
+        // Update the userData based on id
+        if (id === "1") {
+            setUserData({
+                chats: 120,
+                status: 90,
+                calls: 220,
+                location: "India",
+                device: {
+                    name: "iPhone 13",
+                    model: "iphone",
+                    os: "iOS 16",
+                    lastSeen: "2023-05-15 09:12:34",
+                    batteryLevel: "85%",
+                    wifiStatus: "Off",
+                    currentDevice: "India WhatsApp"
+                }
+            });
+        } else if (id === "2") {
+            setUserData({
+                chats: 100,
+                status: 80,
+                calls: 200,
+                location: "USA",
+                device: {
+                    name: "Google Pixel 6",
+                    model: "pixel",
+                    os: "Android 12",
+                    lastSeen: "2023-06-18 18:30:20",
+                    batteryLevel: "75%",
+                    wifiStatus: "On",
+                    currentDevice: "USA WhatsApp"
+                }
+            });
+        }
+        // Add more conditions for other users if needed
+    }, [id]);
+
 
 
     return (
@@ -27,7 +87,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                 <Sidebar/>
+                <Sidebar />
                 <div class="container-fluid page-body-wrapper">
                     <nav class="navbar p-0 fixed-top d-flex flex-row">
                         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
@@ -38,184 +98,193 @@ const Dashboard = () => {
                     <div class="main-panel">
                         <div class="content-wrapper">
                             <div class="row">
-                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <div class="d-flex align-items-center align-self-start">
-                                                        <h3 class="mb-0">$12.34</h3>
-                                                        <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+                            <div className="col-xl-6 col-sm-6 grid-margin stretch-card">
+                                    <div className="card">
+                                        <Link to={'/chatbox'} style={{ textDecoration: 'none' }} className="card-body">
+                                            <div className="row">
+                                                <div className="col-9">
+                                                    <div className="d-flex align-items-center align-self-start">
+                                                        <i className="fa fa-whatsapp" style={{ color: '#23d80f', fontSize: '35px' }}></i>
+                                                        <h3 className="mb-0" style={{ marginLeft: '10px', marginTop: '-10px' }}> Chats</h3>
                                                     </div>
                                                 </div>
-                                                <div class="col-3">
-                                                    <div class="icon icon-box-success ">
-                                                        <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                                <div className="col-3">
+                                                    <div className="icon icon-box-success ">
+                                                        <p style={{ marginTop: '20px' }}>+15</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h6 class="text-muted font-weight-normal">Potential growth</h6>
-                                        </div>
+                                            <h6 className="font-weight-normal" style={{ color: 'white', marginLeft: '45px' }}>Total {userData.chats}</h6>
+                                        </Link>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <div class="card-body">
+                                        <Link to={'/status'} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
-                                                        <h3 class="mb-0">$17.34</h3>
-                                                        <p class="text-success ms-2 mb-0 font-weight-medium">+11%</p>
+                                                        <h3 class="mb-0"><img src='WA Status Logo.png' alt='hj' height={35} style={{ marginLeft: '-10px', marginRight: '-10px' }} /> Status</h3>
+                                                        {/* <p class="text-success ms-2 mb-0 font-weight-medium">+11%</p> */}
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="icon icon-box-success">
-                                                        <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                                        <p style={{ marginTop: '20px' }}>+5</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h6 class="text-muted font-weight-normal">Revenue current</h6>
-                                        </div>
+                                            <h6 class="font-weight-normal ml-5" style={{ marginLeft: '50px', color: 'white' }}>Total {userData.status}</h6>
+                                        </Link>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <div class="card-body">
+                                        <Link to={'/call-history'} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
-                                                        <h3 class="mb-0">$12.34</h3>
-                                                        <p class="text-danger ms-2 mb-0 font-weight-medium">-2.4%</p>
+                                                        <i className='fa fa-phone' style={{ color: '#23d80f', fontSize: '35px' }}></i><h3 class="mb-0" style={{ marginLeft: '10px', marginTop: '-10px' }}> Calls History</h3>
+                                                        {/* <p class="text-danger ms-2 mb-0 font-weight-medium">-2.4%</p> */}
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="icon icon-box-danger">
-                                                        <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                                                    <div class="icon icon-box-success">
+                                                        <p style={{ marginTop: '20px' }}>+40</p>
+
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h6 class="text-muted font-weight-normal">Daily Income</h6>
-                                        </div>
+                                            <h6 class="font-weight-normal" style={{ color: 'white', marginLeft: '45px' }}>Total {userData.calls}</h6>
+                                        </Link>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <div class="card-body">
+                                        <Link to={'/location'} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
-                                                        <h3 class="mb-0">$31.53</h3>
-                                                        <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+                                                        <i className='fa fa-map-marker' style={{ color: '#23d80f', fontSize: '35px' }}></i><h3 class="mb-0" style={{ marginLeft: '10px', marginTop: '-10px' }}> Location</h3>
+                                                        {/* <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> */}
                                                     </div>
                                                 </div>
-                                                <div class="col-3">
+                                                {/* <div class="col-3">
                                                     <div class="icon icon-box-success ">
-                                                        <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                                        <p style={{ marginTop: '20px' }}>+60</p>
+
                                                     </div>
-                                                </div>
+                                                </div> */}
                                             </div>
-                                            <h6 class="text-muted font-weight-normal">Expense current</h6>
-                                        </div>
+                                            <h6 class="font-weight-normal" style={{ color: 'white', marginLeft: '45px' }}>{userData.location} </h6>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                             
+
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="d-flex flex-row justify-content-between">
-                                                <h4 class="card-title mb-1">Open Projects</h4>
-                                                <p class="text-muted mb-1">Your data status</p>
+                                                <h2 class="card-title mb-1">Device Information</h2>
+                                                {/* <p class="text-muted mb-1">Your data status</p> */}
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="preview-list">
                                                         <div class="preview-item border-bottom">
                                                             <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-primary">
-                                                                    <i class="mdi mdi-file-document"></i>
+                                                                <div class="preview-icon bg-success">
+                                                                    <i class="fa fa-user"></i>
                                                                 </div>
                                                             </div>
                                                             <div class="preview-item-content d-sm-flex flex-grow">
                                                                 <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Admin dashboard design</h6>
-                                                                    <p class="text-muted mb-0">Broadcast web app mockup</p>
+                                                                    <h6 class="preview-subject">Device Name : </h6>
+                                                                    <h6 class="preview-subject">{userData.device.name}</h6>
+                                                                    {/* <p class="text-muted mb-0">Broadcast web app mockup</p> */}
                                                                 </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                                                    <p class="text-muted">15 minutes ago</p>
-                                                                    <p class="text-muted mb-0">30 tasks, 5 issues </p>
+                                                                <div class="preview-thumbnail">
+                                                                    <div class="preview-icon bg-success">
+                                                                        <i class="fa fa-mobile"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
+                                                                    <h6 class="preview-subject mt-2">Device Model : {userData.device.model}</h6>
+                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="preview-item border-bottom">
                                                             <div class="preview-thumbnail">
                                                                 <div class="preview-icon bg-success">
-                                                                    <i class="mdi mdi-cloud-download"></i>
+                                                                    <i class="fa fa-info"></i>
                                                                 </div>
                                                             </div>
                                                             <div class="preview-item-content d-sm-flex flex-grow">
                                                                 <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Wordpress Development</h6>
-                                                                    <p class="text-muted mb-0">Upload new design</p>
+                                                                    <h6 class="preview-subject">Device OS </h6>
+                                                                    <h6 class="preview-subject"> Version: {userData.device.os}</h6>
+                                                                    {/* <p class="text-muted mb-0">Upload new design</p> */}
                                                                 </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                                                    <p class="text-muted">1 hour ago</p>
-                                                                    <p class="text-muted mb-0">23 tasks, 5 issues </p>
+                                                                <div class="preview-thumbnail" style={{ marginLeft: '10px' }}>
+                                                                    <div class="preview-icon bg-success">
+                                                                        <i class="fa fa-desktop"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
+                                                                    <h6 class="preview-subject mt-2">Device Status :  {userData.device.lastSeen}</h6>
+                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="preview-item border-bottom">
                                                             <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-info">
+                                                                <div class="preview-icon bg-success">
                                                                     <i class="mdi mdi-clock"></i>
                                                                 </div>
                                                             </div>
                                                             <div class="preview-item-content d-sm-flex flex-grow">
                                                                 <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Project meeting</h6>
-                                                                    <p class="text-muted mb-0">New project discussion</p>
+                                                                    <h6 class="preview-subject">WhatsApp Last <br /> Seen: 2023-04-27<br /> 14:48:40</h6>
+                                                                    {/* <p class="text-muted mb-0">New project discussion</p> */}
                                                                 </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                                                    <p class="text-muted">35 minutes ago</p>
-                                                                    <p class="text-muted mb-0">15 tasks, 2 issues</p>
+                                                                <div class="preview-thumbnail" style={{ marginLeft: '-50px' }}>
+                                                                    <div class="preview-icon bg-success">
+                                                                        <i class="fa fa-battery"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
+                                                                    <h6 class="preview-subject mt-2">Battery Level: 98 %</h6>
+                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="preview-item border-bottom">
                                                             <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-danger">
-                                                                    <i class="mdi mdi-email-open"></i>
+                                                                <div class="preview-icon bg-success">
+                                                                    <i class="fa fa-wifi"></i>
                                                                 </div>
                                                             </div>
                                                             <div class="preview-item-content d-sm-flex flex-grow">
                                                                 <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Broadcast Mail</h6>
-                                                                    <p class="text-muted mb-0">Sent release details to team</p>
+                                                                    <h6 class="preview-subject mt-2">WiFi:  On</h6>
+                                                                    {/* <p class="text-muted mb-0">Sent release details to team</p> */}
                                                                 </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                                                    <p class="text-muted">55 minutes ago</p>
-                                                                    <p class="text-muted mb-0">35 tasks, 7 issues </p>
+
+                                                                <div class="preview-thumbnail" style={{ marginLeft: '130px' }}>
+                                                                    <div class="preview-icon bg-success">
+                                                                        <i class="fa fa-desktop"></i>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="preview-item">
-                                                            <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-warning">
-                                                                    <i class="mdi mdi-chart-pie"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="preview-item-content d-sm-flex flex-grow">
-                                                                <div class="flex-grow">
-                                                                    <h6 class="preview-subject">UI Design</h6>
-                                                                    <p class="text-muted mb-0">New application planning</p>
-                                                                </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                                                    <p class="text-muted">50 minutes ago</p>
-                                                                    <p class="text-muted mb-0">27 tasks, 4 issues </p>
+                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
+                                                                    <h6 class="preview-subject mt-2">Current Device: Pakistan WhatsApp</h6>
+                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -223,328 +292,53 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5>Revenue</h5>
-                                            <div class="row">
-                                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                                                    <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                        <h2 class="mb-0">$32123</h2>
-                                                        <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
-                                                    </div>
-                                                    <h6 class="text-muted font-weight-normal">11.38% Since last month</h6>
-                                                </div>
-                                                <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                                    <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5>Sales</h5>
-                                            <div class="row">
-                                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                                                    <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                        <h2 class="mb-0">$45850</h2>
-                                                        <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p>
-                                                    </div>
-                                                    <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
-                                                </div>
-                                                <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                                    <i class="icon-lg mdi mdi-wallet-travel text-danger ml-auto"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5>Purchase</h5>
-                                            <div class="row">
-                                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                                                    <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                        <h2 class="mb-0">$2039</h2>
-                                                        <p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p>
-                                                    </div>
-                                                    <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
-                                                </div>
-                                                <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                                    <i class="icon-lg mdi mdi-monitor text-success ml-auto"></i>
-                                                </div>
-                                            </div>
+                            <div className="row">
+
+                                {/* Add the WhatsApp Usage Chart here */}
+                                <div className="col-xl-12 col-lg-12 col-md-12 grid-margin stretch-card">
+                                    <div className="card">
+                                        <h2 className='p-3'>WhatsApp Usage</h2>
+                                        <div className="card-body">
+                                            <WhatsAppUsageChart />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row ">
-                                <div class="col-12 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Order Status</h4>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" id="check-all" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </th>
-                                                            <th> Client Name </th>
-                                                            <th> Order No </th>
-                                                            <th> Product Cost </th>
-                                                            <th> Project </th>
-                                                            <th> Payment Mode </th>
-                                                            <th> Start Date </th>
-                                                            <th> Payment Status </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <img src="assets/faces/face1.jpg" alt="uhk" />
-                                                                <span class="ps-2">Henry Klein</span>
-                                                            </td>
-                                                            <td> 02312 </td>
-                                                            <td> $14,500 </td>
-                                                            <td> Dashboard </td>
-                                                            <td> Credit card </td>
-                                                            <td> 04 Dec 2019 </td>
-                                                            <td>
-                                                                <div class="badge badge-outline-success">Approved</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <img src="assets/faces/face2.jpg" alt="uuiii" />
-                                                                <span class="ps-2">Estella Bryan</span>
-                                                            </td>
-                                                            <td> 02312 </td>
-                                                            <td> $14,500 </td>
-                                                            <td> Website </td>
-                                                            <td> Cash on delivered </td>
-                                                            <td> 04 Dec 2019 </td>
-                                                            <td>
-                                                                <div class="badge badge-outline-warning">Pending</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <img src="assets/faces/face5.jpg" alt="hu" />
-                                                                <span class="ps-2">Lucy Abbott</span>
-                                                            </td>
-                                                            <td> 02312 </td>
-                                                            <td> $14,500 </td>
-                                                            <td> App design </td>
-                                                            <td> Credit card </td>
-                                                            <td> 04 Dec 2019 </td>
-                                                            <td>
-                                                                <div class="badge badge-outline-danger">Rejected</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <img src="assets/faces/face3.jpg" alt="yyy" />
-                                                                <span class="ps-2">Peter Gill</span>
-                                                            </td>
-                                                            <td> 02312 </td>
-                                                            <td> $14,500 </td>
-                                                            <td> Development </td>
-                                                            <td> Online Payment </td>
-                                                            <td> 04 Dec 2019 </td>
-                                                            <td>
-                                                                <div class="badge badge-outline-success">Approved</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check form-check-muted m-0">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" />
-                                                                        <i class="input-helper"></i></label>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <img src="assets/faces/face4.jpg" alt="hgjhk" />
-                                                                <span class="ps-2">Sallie Reyes</span>
-                                                            </td>
-                                                            <td> 02312 </td>
-                                                            <td> $14,500 </td>
-                                                            <td> Website </td>
-                                                            <td> Credit card </td>
-                                                            <td> 04 Dec 2019 </td>
-                                                            <td>
-                                                                <div class="badge badge-outline-success">Approved</div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                            <div className="row">
+
+                                {/* Add the WhatsApp Usage Chart here */}
+                                <div className="col-xl-12 col-lg-12 col-md-12 grid-margin stretch-card">
+                                    <div className="card">
+                                        <h2 className='p-3'>Weekly Average</h2>
+                                        <div className="card-body">
+                                            <WeeklyAverageChart />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <h4 class="card-title">Messages</h4>
-                                                <p class="text-muted mb-1 small">View all</p>
-                                            </div>
-                                            <div class="preview-list">
-                                                <div class="preview-item border-bottom">
-                                                    <div class="preview-thumbnail">
-                                                        <img src="assets/faces/face6.jpg" alt="hgj" class="rounded-circle" />
-                                                    </div>
-                                                    <div class="preview-item-content d-flex flex-grow">
-                                                        <div class="flex-grow">
-                                                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                                <h6 class="preview-subject">Leonard</h6>
-                                                                <p class="text-muted text-small">5 minutes ago</p>
-                                                            </div>
-                                                            <p class="text-muted">Well, it seems to be working now.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="preview-item border-bottom">
-                                                    <div class="preview-thumbnail">
-                                                        <img src="assets/faces/face8.jpg" alt="guy" class="rounded-circle" />
-                                                    </div>
-                                                    <div class="preview-item-content d-flex flex-grow">
-                                                        <div class="flex-grow">
-                                                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                                <h6 class="preview-subject">Luella Mills</h6>
-                                                                <p class="text-muted text-small">10 Minutes Ago</p>
-                                                            </div>
-                                                            <p class="text-muted">Well, it seems to be working now.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="preview-item border-bottom">
-                                                    <div class="preview-thumbnail">
-                                                        <img src="assets/faces/face9.jpg" alt="gjh" class="rounded-circle" />
-                                                    </div>
-                                                    <div class="preview-item-content d-flex flex-grow">
-                                                        <div class="flex-grow">
-                                                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                                <h6 class="preview-subject">Ethel Kelly</h6>
-                                                                <p class="text-muted text-small">2 Hours Ago</p>
-                                                            </div>
-                                                            <p class="text-muted">Please review the tickets</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="preview-item border-bottom">
-                                                    <div class="preview-thumbnail">
-                                                        <img src="assets/faces/face11.jpg" alt="hgj" class="rounded-circle" />
-                                                    </div>
-                                                    <div class="preview-item-content d-flex flex-grow">
-                                                        <div class="flex-grow">
-                                                            <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                                <h6 class="preview-subject">Herman May</h6>
-                                                                <p class="text-muted text-small">4 Hours Ago</p>
-                                                            </div>
-                                                            <p class="text-muted">Thanks a lot. It was easy to fix it .</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="col-md-12 col-xl-8 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">To do list</h4>
-                                            <div class="add-items d-flex">
-                                                <input type="text" class="form-control todo-list-input" placeholder="enter task.." />
-                                                <button class="add btn btn-primary todo-list-add-btn">Add</button>
-                                            </div>
-                                            <div class="list-wrapper">
-                                                <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-                                                    <li>
-                                                        <div class="form-check form-check-primary">
-                                                            <label class="form-check-label">
-                                                                <input class="checkbox" type="checkbox" /> Create invoice <i class="input-helper"></i></label>
-                                                        </div>
-                                                        <i class="remove mdi mdi-close-box"></i>
-                                                    </li>
-                                                    <li>
-                                                        <div class="form-check form-check-primary">
-                                                            <label class="form-check-label">
-                                                                <input class="checkbox" type="checkbox" /> Meeting with Alita <i class="input-helper"></i></label>
-                                                        </div>
-                                                        <i class="remove mdi mdi-close-box"></i>
-                                                    </li>
-                                                    <li class="completed">
-                                                        <div class="form-check form-check-primary">
-                                                            <label class="form-check-label">
-                                                                <input class="checkbox" type="checkbox" checked="" /> Prepare for presentation <i class="input-helper"></i></label>
-                                                        </div>
-                                                        <i class="remove mdi mdi-close-box"></i>
-                                                    </li>
-                                                    <li>
-                                                        <div class="form-check form-check-primary">
-                                                            <label class="form-check-label">
-                                                                <input class="checkbox" type="checkbox" /> Plan weekend outing <i class="input-helper"></i></label>
-                                                        </div>
-                                                        <i class="remove mdi mdi-close-box"></i>
-                                                    </li>
-                                                    <li>
-                                                        <div class="form-check form-check-primary">
-                                                            <label class="form-check-label">
-                                                                <input class="checkbox" type="checkbox" /> Pick up kids from school <i class="input-helper"></i></label>
-                                                        </div>
-                                                        <i class="remove mdi mdi-close-box"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            <div className="row">
+
+                                {/* Add the WhatsApp Usage Chart here */}
+                                <div className="col-xl-12 col-lg-12 col-md-12 grid-margin stretch-card">
+                                    <div className="card">
+                                        <h2 className='p-3'><i className='fa fa-map-marker'></i> Current Location</h2>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462449.285138231!2d66.37242990787928!3d30.375321792177443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf5eac1f7687%3A0x67fb2e5a2d4284e6!2sPakistan!5e0!3m2!1sen!2sus!4v1699376633372!5m2!1sen!2sus"
+                                            style={{width: '100%'}}
+                                            height="450"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+
                                     </div>
                                 </div>
                             </div>
-                           
+
+
                         </div>
                         <footer class="footer">
-                            
+
                         </footer>
                     </div>
                 </div>

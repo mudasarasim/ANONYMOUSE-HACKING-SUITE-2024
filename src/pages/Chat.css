@@ -115,7 +115,8 @@
 
 .chat .chat-history .message-data-time {
     color: #434651;
-    padding-left: 6px
+    padding-left: 6px;
+    color: #23d80f;
 }
 
 .chat .chat-history .message {
