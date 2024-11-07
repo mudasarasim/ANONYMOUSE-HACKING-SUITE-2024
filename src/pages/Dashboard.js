@@ -291,7 +291,7 @@ const Dashboard = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Device Status :  {userData.device.lastSeen}</h6>
+                                                                    <h6 class="preview-subject mt-2">Device Status :  {userData.device.dStatus}</h6>
                                                                     {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
