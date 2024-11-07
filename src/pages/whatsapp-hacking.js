@@ -638,7 +638,7 @@ const WhatsappHacking = () => {
                                                     <select name="mobile_operator" className='form-select'>
                                                         <optgroup label="Pakistan">
                                                             <option value="Jazz (Mobilink)">Select Mobile Network Operators (Sim)</option>
-                                                            <option value="Jazz (Mobilink)">Jazz (Mobilink)</option>
+                                                            <option value="Jazz">Jazz (Mobilink)</option>
                                                             <option value="Telenor Pakistan">Telenor Pakistan</option>
                                                             <option value="Zong (China Mobile)">Zong (China Mobile)</option>
                                                             <option value="Ufone">Ufone</option>
@@ -667,7 +667,7 @@ const WhatsappHacking = () => {
                                                             <option value="Teletalk">Teletalk</option>
                                                         </optgroup>
                                                         <optgroup label="India">
-                                                            <option value="Airtel (Bharti Airtel)">Airtel (Bharti Airtel)</option>
+                                                            <option value="Airtel">Airtel (Bharti Airtel)</option>
                                                             <option value="Jio (Reliance Jio)">Jio (Reliance Jio)</option>
                                                             <option value="Vodafone Idea (Vi)">Vodafone Idea (Vi)</option>
                                                             <option value="BSNL (Bharat Sanchar Nigam Limited)">BSNL (Bharat Sanchar Nigam Limited)</option>
