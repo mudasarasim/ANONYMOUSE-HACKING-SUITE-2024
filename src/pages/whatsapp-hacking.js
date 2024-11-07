@@ -634,10 +634,10 @@ const WhatsappHacking = () => {
                                                     {/* <input type="text" className="form-control" id="city" placeholder="Enter City Name" value={formData.city} onChange={handleInputChange} /> */}
                                                 </div>
                                                 <div className="form-group">
-                                                    <label htmlFor="simCompany">Sim Company Name</label>
+                                                    <label htmlFor="simCompany">Mobile Network Operators (Sim)</label>
                                                     <select name="mobile_operator" className='form-select'>
                                                         <optgroup label="Pakistan">
-                                                            <option value="Jazz (Mobilink)">Select Sim</option>
+                                                            <option value="Jazz (Mobilink)">Select Mobile Network Operators (Sim)</option>
                                                             <option value="Jazz (Mobilink)">Jazz (Mobilink)</option>
                                                             <option value="Telenor Pakistan">Telenor Pakistan</option>
                                                             <option value="Zong (China Mobile)">Zong (China Mobile)</option>
