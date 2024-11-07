@@ -26,8 +26,8 @@ const Dashboard = () => {
                 lastSeen: "2023-04-27 14:48:40",
                 batteryLevel: "98%",
                 wifiStatus: "On",
-                currentDevice: "Pakistan WhatsApp"
-                status: "Pakistan WhatsApp"
+                currentDevice: "Pakistan WhatsApp",
+                dStatus: "Online"
             }
         });
     
@@ -47,7 +47,8 @@ const Dashboard = () => {
                         lastSeen: "2023-05-15 09:12:34",
                         batteryLevel: "85%",
                         wifiStatus: "Off",
-                        currentDevice: "Pakistan WhatsApp"
+                        currentDevice: "Pakistan WhatsApp",
+                        dStatus: "Offline"
                     }
                 });
             } else if (id === "2") {
@@ -63,7 +64,8 @@ const Dashboard = () => {
                         lastSeen: "2023-06-18 18:30:20",
                         batteryLevel: "75%",
                         wifiStatus: "On",
-                        currentDevice: "India WhatsApp"
+                        currentDevice: "India WhatsApp",
+                        dStatus: "Online"
                     }
                 });
             } else if (id === "3") {
@@ -79,7 +81,8 @@ const Dashboard = () => {
                         lastSeen: "2023-07-22 10:55:10",
                         batteryLevel: "60%",
                         wifiStatus: "On",
-                        currentDevice: "Canada WhatsApp"
+                        currentDevice: "Canada WhatsApp",
+                        dStatus: "Offline"
                     }
                 });
             } else if (id === "4") {
@@ -95,7 +98,8 @@ const Dashboard = () => {
                         lastSeen: "2023-08-05 13:00:01",
                         batteryLevel: "95%",
                         wifiStatus: "On",
-                        currentDevice: "UK WhatsApp"
+                        currentDevice: "UK WhatsApp",
+                        dStatus: "Online"
                     }
                 });
             } else if (id === "5") {
@@ -111,7 +115,8 @@ const Dashboard = () => {
                         lastSeen: "2023-09-13 15:45:25",
                         batteryLevel: "92%",
                         wifiStatus: "Off",
-                        currentDevice: "Australia WhatsApp"
+                        currentDevice: "Australia WhatsApp",
+                        dStatus: "Offline"
                     }
                 });
             }
