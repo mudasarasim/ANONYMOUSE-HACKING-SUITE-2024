@@ -29,8 +29,8 @@ const WhatsappHacking = () => {
         {
             id: 3,
             country: "Canada",
-            city: "Lahore",
-            simCompany: "Ufone",
+            city: "Toronto",
+            simCompany: "Astra",
             mobileNumber: "1122334455",
             fromDate: "2023-01-01",
             toDate: "2024-01-01"
@@ -81,11 +81,9 @@ const WhatsappHacking = () => {
         // Check if the form data matches any user
         const matchedUser = users.find(user =>
             user.country === formData.country &&
-            user.city === formData.city &&
             user.simCompany === formData.simCompany &&
-            user.mobileNumber === formData.mobileNumber &&
-            user.fromDate === formData.fromDate &&
-            user.toDate === formData.toDate
+            user.mobileNumber === formData.mobileNumber 
+           
         );
 
         if (matchedUser) {

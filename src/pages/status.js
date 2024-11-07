@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 
@@ -45,9 +45,18 @@ const Status = () => {
     ];
 
     // Use state to determine which set of videos to display
-    const [videoId] = useState(1); // Assume videoId comes from props or route
+    const [videoId, setVideoId] = useState(1); // Default videoId is 1
 
-    // Map the video arrays to a condition
+    // Extract videoId from URL query string
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get('videoId'), 10);
+        if (id >= 1 && id <= 5) {
+            setVideoId(id);
+        }
+    }, []);
+
+    // Map the video arrays to a condition based on the videoId
     const videos = 
         videoId === 1 ? videos1 :
         videoId === 2 ? videos2 :

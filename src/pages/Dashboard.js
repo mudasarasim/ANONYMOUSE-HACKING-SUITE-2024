@@ -3,69 +3,121 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import WhatsAppUsageChart from '../components/WhatsAppUsageChart';
 import WeeklyAverageChart from '../components/WeeklyAverageChart';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'; // To use the location hook for getting the current URL
+
 
 const Dashboard = () => {
-    const { id } = useParams(); // Get the user id from the URL
-
-    const [userData, setUserData] = useState({
-        chats: 220,
-        status: 86,
-        calls: 510,
-        location: "Pakistan",
-        device: {
-            name: "Samsung S20",
-            model: "samsung",
-            os: "10",
-            lastSeen: "2023-04-27 14:48:40",
-            batteryLevel: "98%",
-            wifiStatus: "On",
-            currentDevice: "Pakistan WhatsApp"
-        }
-    });
-
-    // Simulate changing device info based on user id
-    useEffect(() => {
-        // You can simulate fetching data based on user id
-        // Update the userData based on id
-        if (id === "1") {
-            setUserData({
-                chats: 120,
-                status: 90,
-                calls: 220,
-                location: "India",
-                device: {
-                    name: "iPhone 13",
-                    model: "iphone",
-                    os: "iOS 16",
-                    lastSeen: "2023-05-15 09:12:34",
-                    batteryLevel: "85%",
-                    wifiStatus: "Off",
-                    currentDevice: "India WhatsApp"
-                }
-            });
-        } else if (id === "2") {
-            setUserData({
-                chats: 100,
-                status: 80,
-                calls: 200,
-                location: "USA",
-                device: {
-                    name: "Google Pixel 6",
-                    model: "pixel",
-                    os: "Android 12",
-                    lastSeen: "2023-06-18 18:30:20",
-                    batteryLevel: "75%",
-                    wifiStatus: "On",
-                    currentDevice: "USA WhatsApp"
-                }
-            });
-        }
-        // Add more conditions for other users if needed
-    }, [id]);
-
-
-
+        // Using React's useLocation to get the current URL
+        const location = useLocation();
+        const queryParams = new URLSearchParams(location.search);
+        const id = queryParams.get("id"); // Extract user id from the URL query
+    
+        // Default user data
+        const [userData, setUserData] = useState({
+            chats: 220,
+            status: 86,
+            calls: 510,
+            location: "Pakistan",
+            device: {
+                name: "Samsung S20",
+                model: "samsung",
+                os: "10",
+                lastSeen: "2023-04-27 14:48:40",
+                batteryLevel: "98%",
+                wifiStatus: "On",
+                currentDevice: "Pakistan WhatsApp"
+                status: "Pakistan WhatsApp"
+            }
+        });
+    
+        // Simulate changing device info based on user id
+        useEffect(() => {
+            // Fetch user data based on id (you can fetch data from an API or set it manually)
+            if (id === "1") {
+                setUserData({
+                    chats: 120,
+                    status: 90,
+                    calls: 220,
+                    location: "Pakistan",
+                    device: {
+                        name: "iPhone 13",
+                        model: "iphone",
+                        os: "iOS 16",
+                        lastSeen: "2023-05-15 09:12:34",
+                        batteryLevel: "85%",
+                        wifiStatus: "Off",
+                        currentDevice: "Pakistan WhatsApp"
+                    }
+                });
+            } else if (id === "2") {
+                setUserData({
+                    chats: 100,
+                    status: 80,
+                    calls: 200,
+                    location: "India",
+                    device: {
+                        name: "Google Pixel 6",
+                        model: "pixel",
+                        os: "Android 12",
+                        lastSeen: "2023-06-18 18:30:20",
+                        batteryLevel: "75%",
+                        wifiStatus: "On",
+                        currentDevice: "India WhatsApp"
+                    }
+                });
+            } else if (id === "3") {
+                setUserData({
+                    chats: 150,
+                    status: 95,
+                    calls: 300,
+                    location: "Canada",
+                    device: {
+                        name: "OnePlus 9",
+                        model: "oneplus",
+                        os: "Android 11",
+                        lastSeen: "2023-07-22 10:55:10",
+                        batteryLevel: "60%",
+                        wifiStatus: "On",
+                        currentDevice: "Canada WhatsApp"
+                    }
+                });
+            } else if (id === "4") {
+                setUserData({
+                    chats: 180,
+                    status: 75,
+                    calls: 180,
+                    location: "UK",
+                    device: {
+                        name: "Samsung Galaxy S21",
+                        model: "samsung",
+                        os: "Android 13",
+                        lastSeen: "2023-08-05 13:00:01",
+                        batteryLevel: "95%",
+                        wifiStatus: "On",
+                        currentDevice: "UK WhatsApp"
+                    }
+                });
+            } else if (id === "5") {
+                setUserData({
+                    chats: 200,
+                    status: 85,
+                    calls: 400,
+                    location: "Australia",
+                    device: {
+                        name: "Huawei P40",
+                        model: "huawei",
+                        os: "HarmonyOS",
+                        lastSeen: "2023-09-13 15:45:25",
+                        batteryLevel: "92%",
+                        wifiStatus: "Off",
+                        currentDevice: "Australia WhatsApp"
+                    }
+                });
+            }
+            // Add additional conditions for more users if needed
+        }, [id]);
+    
     return (
         <>
             <div class="container-scroller">
@@ -256,7 +308,7 @@ const Dashboard = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Battery Level: 98 %</h6>
+                                                                    <h6 class="preview-subject mt-2">Battery Level: {userData.device.batteryLevel}</h6>
                                                                     {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
@@ -279,7 +331,7 @@ const Dashboard = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Current Device: Pakistan WhatsApp</h6>
+                                                                    <h6 class="preview-subject mt-2">Current Device: {userData.device.currentDevice}</h6>
                                                                     {/* <h6 class="preview-subject">Samsung S20</h6> */}
                                                                 </div>
                                                             </div>
