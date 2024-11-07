@@ -81,7 +81,6 @@ const WhatsappHacking = () => {
         // Check if the form data matches any user
         const matchedUser = users.find(user =>
             user.country === formData.country &&
-            user.simCompany === formData.simCompany &&
             user.mobileNumber === formData.mobileNumber 
            
         );
