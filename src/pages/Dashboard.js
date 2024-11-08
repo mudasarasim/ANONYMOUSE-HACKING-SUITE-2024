@@ -19,6 +19,7 @@ const Dashboard = () => {
             status: 86,
             calls: 510,
             location: "Pakistan",
+            icon: "fa fa-whatsapp",
             device: {
                 name: "Samsung S20",
                 model: "samsung",
@@ -39,6 +40,7 @@ const Dashboard = () => {
                     chats: 120,
                     status: 90,
                     calls: 220,
+                    icon: "fa fa-wechat",
                     location: "Pakistan",
                     device: {
                         name: "iPhone 13",
@@ -161,7 +163,7 @@ const Dashboard = () => {
                                             <div className="row">
                                                 <div className="col-9">
                                                     <div className="d-flex align-items-center align-self-start">
-                                                        <i className="fa fa-whatsapp" style={{ color: '#23d80f', fontSize: '35px' }}></i>
+                                                        <i className={userData.icon} style={{ color: '#23d80f', fontSize: '35px' }}></i>
                                                         <h3 className="mb-0" style={{ marginLeft: '10px', marginTop: '-10px' }}> Chats</h3>
                                                     </div>
                                                 </div>
