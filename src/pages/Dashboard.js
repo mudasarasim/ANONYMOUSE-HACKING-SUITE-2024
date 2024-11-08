@@ -59,6 +59,7 @@ const Dashboard = () => {
                     status: 80,
                     calls: 200,
                     location: "India",
+                    icon: "fa fa-whatsapp",
                     device: {
                         name: "Google Pixel 6",
                         model: "pixel",
@@ -76,6 +77,7 @@ const Dashboard = () => {
                     status: 95,
                     calls: 300,
                     location: "Canada",
+                    icon: "fa fa-whatsapp",
                     device: {
                         name: "OnePlus 9",
                         model: "oneplus",
@@ -93,6 +95,7 @@ const Dashboard = () => {
                     status: 75,
                     calls: 180,
                     location: "UK",
+                    icon: "fa fa-whatsapp",
                     device: {
                         name: "Samsung Galaxy S21",
                         model: "samsung",
@@ -110,6 +113,97 @@ const Dashboard = () => {
                     status: 85,
                     calls: 400,
                     location: "Australia",
+                    icon: "fa fa-whatsapp",
+                    device: {
+                        name: "Huawei P40",
+                        model: "huawei",
+                        os: "HarmonyOS",
+                        lastSeen: "2023-09-13 15:45:25",
+                        batteryLevel: "92%",
+                        wifiStatus: "Off",
+                        currentDevice: "Australia WhatsApp",
+                        dStatus: "Offline"
+                    }
+                });
+            }else if (id === "11") {
+                setUserData({
+                    chats: 120,
+                    status: 90,
+                    calls: 220,
+                    icon: "fa fa-wechat",
+                    location: "Pakistan",
+                    device: {
+                        name: "iPhone 13",
+                        model: "iphone",
+                        os: "iOS 16",
+                        lastSeen: "2023-05-15 09:12:34",
+                        batteryLevel: "85%",
+                        wifiStatus: "Off",
+                        currentDevice: "Pakistan WhatsApp",
+                        dStatus: "Offline"
+                    }
+                });
+            }else if (id === "22") {
+                setUserData({
+                    chats: 100,
+                    status: 80,
+                    calls: 200,
+                    location: "India",
+                    icon: "fa fa-wechat",
+                    device: {
+                        name: "Google Pixel 6",
+                        model: "pixel",
+                        os: "Android 12",
+                        lastSeen: "2023-06-18 18:30:20",
+                        batteryLevel: "75%",
+                        wifiStatus: "On",
+                        currentDevice: "India WhatsApp",
+                        dStatus: "Online"
+                    }
+                });
+            }else if (id === "33") {
+                setUserData({
+                    chats: 150,
+                    status: 95,
+                    calls: 300,
+                    location: "Canada",
+                    icon: "fa fa-wechat",
+                    device: {
+                        name: "OnePlus 9",
+                        model: "oneplus",
+                        os: "Android 11",
+                        lastSeen: "2023-07-22 10:55:10",
+                        batteryLevel: "60%",
+                        wifiStatus: "On",
+                        currentDevice: "Canada WhatsApp",
+                        dStatus: "Offline"
+                    }
+                });
+            } else if (id === "44") {
+                setUserData({
+                    chats: 180,
+                    status: 75,
+                    calls: 180,
+                    location: "UK",
+                    icon: "fa fa-wechat",
+                    device: {
+                        name: "Samsung Galaxy S21",
+                        model: "samsung",
+                        os: "Android 13",
+                        lastSeen: "2023-08-05 13:00:01",
+                        batteryLevel: "95%",
+                        wifiStatus: "On",
+                        currentDevice: "UK WhatsApp",
+                        dStatus: "Online"
+                    }
+                });
+            } else if (id === "55") {
+                setUserData({
+                    chats: 200,
+                    status: 85,
+                    calls: 400,
+                    location: "Australia",
+                    icon: "fa fa-wechat",
                     device: {
                         name: "Huawei P40",
                         model: "huawei",
