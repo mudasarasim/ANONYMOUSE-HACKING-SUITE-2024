@@ -5,35 +5,43 @@ import Navbar from '../components/Navbar';
 const Status = () => {
     // Define the five different video arrays
     const videos1 = [
-        { src: 'https://www.facebook.com/video1', title: 'FB Reel 1' },
-        { src: 'https://www.facebook.com/video2', title: 'FB Reel 2' },
-        { src: 'https://www.facebook.com/video3', title: 'FB Reel 3' },
-        { src: 'https://www.facebook.com/video4', title: 'FB Reel 4' },
-        { src: 'https://www.facebook.com/video5', title: 'FB Reel 5' }
+        { src: '1.mp4'},
+        { src: '2.mp4'},
+        { src: '3.mp4'},
+        { src: '4.mp4'},
+        { src: '5.mp4'},
+        { src: '6.mp4'},
+       
     ];
 
     const videos2 = [
-        { src: 'https://www.facebook.com/video6', title: 'FB Reel 1234' },
-        { src: 'https://www.facebook.com/video7', title: 'FB Reel 678' },
-        { src: 'https://www.facebook.com/video8', title: 'FB Reel 8' },
-        { src: 'https://www.facebook.com/video9', title: 'FB Reel 9' },
-        { src: 'https://www.facebook.com/video10', title: 'FB Reel 10' }
+        { src: '7.mp4'},
+        { src: '8.mp4'},
+        { src: '9.mp4'},
+        { src: '10.mp4'},
+        { src: '11.mp4'},
+        { src: '12.mp4'},
+       
     ];
 
     const videos3 = [
-        { src: 'https://www.facebook.com/video11', title: 'FB Reel 11' },
-        { src: 'https://www.facebook.com/video12', title: 'FB Reel 12' },
-        { src: 'https://www.facebook.com/video13', title: 'FB Reel 13' },
-        { src: 'https://www.facebook.com/video14', title: 'FB Reel 14' },
-        { src: 'https://www.facebook.com/video15', title: 'FB Reel 15' }
+        { src: '13.mp4'},
+        { src: '14.mp4'},
+        { src: '15.mp4'},
+        { src: '16.mp4'},
+        { src: '17.mp4'},
+        { src: '18.mp4'},
+       
     ];
 
     const videos4 = [
-        { src: 'https://www.facebook.com/video16', title: 'FB Reel 16' },
-        { src: 'https://www.facebook.com/video17', title: 'FB Reel 17' },
-        { src: 'https://www.facebook.com/video18', title: 'FB Reel 18' },
-        { src: 'https://www.facebook.com/video19', title: 'FB Reel 19' },
-        { src: 'https://www.facebook.com/video20', title: 'FB Reel 20' }
+        { src: '19.mp4'},
+        { src: '20.mp4'},
+        { src: '21.mp4'},
+        { src: '22.mp4'},
+        { src: '23.mp4'},
+        { src: '24.mp4'},
+       
     ];
 
     const videos5 = [
