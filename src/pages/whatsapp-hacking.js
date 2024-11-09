@@ -90,7 +90,7 @@ const WhatsappHacking = () => {
             navigate(`/dashboard?id=${matchedUser.id}`);
         } else {
             // Show pricing modal (you can replace this with actual modal logic)
-            alert("Data does not match. Please check pricing details.");
+            navigate(`/pricing`);
         }
     };
 

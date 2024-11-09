@@ -171,7 +171,7 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </Link>
                 </li>
-                <li className={`nav-item menu-items ${isActive('/audio-voices') ? 'active' : ''}`}>
+                {/* <li className={`nav-item menu-items ${isActive('/audio-voices') ? 'active' : ''}`}>
                     <Link to={'/audio-voices'} class="nav-link">
                         <span class="menu-icon">
                             <i class="fa fa-microphone"></i>
@@ -179,7 +179,7 @@ const Sidebar = () => {
                         <span class="menu-title"> Audio Voices</span>
                         <i class="menu-arrow"></i>
                     </Link>
-                </li>
+                </li> */}
                 <li className={`nav-item menu-items ${isActive('/videos') ? 'active' : ''}`}>
                     <Link to={'/videos'} class="nav-link" >
                         <span class="menu-icon">
@@ -207,7 +207,7 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </Link>
                 </li>
-                <li class="nav-item menu-items">
+                {/* <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
                         <span class="menu-icon">
                             <i class="fa fa-clock-o"></i>
@@ -215,7 +215,7 @@ const Sidebar = () => {
                         <span class="menu-title"> Time Limits</span>
                         <i class="menu-arrow"></i>
                     </a>
-                </li>
+                </li> */}
                 <li className={`nav-item menu-items ${isActive('/camera') ? 'active' : ''}`}>
                     <Link to={'/camera'} class="nav-link">
                         <span class="menu-icon">
@@ -225,7 +225,7 @@ const Sidebar = () => {
                         <i class="menu-arrow"></i>
                     </Link>
                 </li>
-                <li class="nav-item menu-items">
+                {/* <li class="nav-item menu-items">
                     <a class="nav-link" href="../../pages/icons/font-awesome.html">
                         <span class="menu-icon">
                             <i class="fa fa-file-export"></i>
@@ -233,7 +233,7 @@ const Sidebar = () => {
                         <span class="menu-title">All Data Export</span>
                         <i class="menu-arrow"></i>
                     </a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );

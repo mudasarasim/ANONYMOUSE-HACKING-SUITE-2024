@@ -16,6 +16,7 @@ import AudioVoices from './pages/audio-voices';
 import Videos from './pages/Videos';
 import Photos from './pages/Photos';
 import Camera from './pages/camera';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/location" element={<Location />} />
           <Route path="/camera" element={<Camera />} />
           <Route path="/chatbox" element={<ChatBox />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </div>
     </Router>
