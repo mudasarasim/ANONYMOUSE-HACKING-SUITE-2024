@@ -10,7 +10,7 @@
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
 .people-list {
-    height: 600px; /* Set the height to a fixed value or based on your layout */
+    height: 570px; /* Set the height to a fixed value or based on your layout */
     overflow-y: auto; /* Enable vertical scrolling */
     padding-right: 10px; /* Add some padding to the right for the scrollbar */
 }

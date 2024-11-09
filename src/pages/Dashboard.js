@@ -16,8 +16,12 @@ const Dashboard = () => {
         // Default user data
         const [userData, setUserData] = useState({
             chats: 220,
+            chatsPlus: 20,
             status: 86,
+            statusPlus: 16,
             calls: 510,
+            callsPlus: 10,
+            name: "Whatsapp",
             location: "Pakistan",
             icon: "fa fa-whatsapp",
             device: {
@@ -38,9 +42,13 @@ const Dashboard = () => {
             if (id === "1") {
                 setUserData({
                     chats: 120,
+                    chatsPlus: 21,
                     status: 90,
+                    statusPlus: 7,
                     calls: 220,
-                    icon: "fa fa-wechat",
+                    callsPlus: 18,
+                    name: "Whatsapp",
+                    icon: "fa fa-whatsapp",
                     location: "Pakistan",
                     device: {
                         name: "iPhone 13",
@@ -56,8 +64,12 @@ const Dashboard = () => {
             } else if (id === "2") {
                 setUserData({
                     chats: 100,
+                    chatsPlus: 10,
                     status: 80,
+                    statusPlus: 8,
                     calls: 200,
+                    name: "Whatsapp",
+                    callsPlus: 12,
                     location: "India",
                     icon: "fa fa-whatsapp",
                     device: {
@@ -74,8 +86,12 @@ const Dashboard = () => {
             } else if (id === "3") {
                 setUserData({
                     chats: 150,
+                    chatsPlus: 11,
                     status: 95,
+                    status: 17,
                     calls: 300,
+                    calls: 9,
+                    name: "Whatsapp",
                     location: "Canada",
                     icon: "fa fa-whatsapp",
                     device: {
@@ -92,8 +108,12 @@ const Dashboard = () => {
             } else if (id === "4") {
                 setUserData({
                     chats: 180,
+                    chatsPlus: 22,
                     status: 75,
+                    statusPlus: 19,
                     calls: 180,
+                    callsPlus: 31,
+                    name: "Whatsapp",
                     location: "UK",
                     icon: "fa fa-whatsapp",
                     device: {
@@ -110,8 +130,12 @@ const Dashboard = () => {
             } else if (id === "5") {
                 setUserData({
                     chats: 200,
+                    chatsPlus: 41,
                     status: 85,
+                    statusPlus: 27,
                     calls: 400,
+                    callsPlus: 30,
+                    name: "Whatsapp",
                     location: "Australia",
                     icon: "fa fa-whatsapp",
                     device: {
@@ -128,8 +152,12 @@ const Dashboard = () => {
             }else if (id === "11") {
                 setUserData({
                     chats: 120,
+                    chatsPlus: 10,
                     status: 90,
+                    statusPlus: 13,
                     calls: 220,
+                    callsPlus: 20,
+                    name: "Facebook",
                     icon: "fa fa-wechat",
                     location: "Pakistan",
                     device: {
@@ -145,9 +173,13 @@ const Dashboard = () => {
                 });
             }else if (id === "22") {
                 setUserData({
-                    chats: 100,
-                    status: 80,
-                    calls: 200,
+                    chats: 400,
+                    chatsPlus: 68,
+                    status: 120,
+                    statusPlus: 33,
+                    calls: 500,
+                    callsPlus: 57,
+                    name: "Facebook",
                     location: "India",
                     icon: "fa fa-wechat",
                     device: {
@@ -163,9 +195,13 @@ const Dashboard = () => {
                 });
             }else if (id === "33") {
                 setUserData({
-                    chats: 150,
-                    status: 95,
-                    calls: 300,
+                    chats: 650,
+                    chatsPlus: 61,
+                    status: 195,
+                    statusPlus: 42,
+                    calls: 500,
+                    callsPlus: 11,
+                    name: "Facebook",
                     location: "Canada",
                     icon: "fa fa-wechat",
                     device: {
@@ -181,9 +217,13 @@ const Dashboard = () => {
                 });
             } else if (id === "44") {
                 setUserData({
-                    chats: 180,
-                    status: 75,
-                    calls: 180,
+                    chats: 880,
+                    chatsPlus: 280,
+                    status: 275,
+                    statusPlus: 75,
+                    calls: 480,
+                    callsPlus: 90,
+                    name: "Facebook",
                     location: "UK",
                     icon: "fa fa-wechat",
                     device: {
@@ -199,9 +239,13 @@ const Dashboard = () => {
                 });
             } else if (id === "55") {
                 setUserData({
-                    chats: 200,
-                    status: 85,
+                    chats: 800,
+                    chatsPlus: 120,
+                    status: 285,
+                    statusPlus: 34,
                     calls: 400,
+                    callsPlus: 40,
+                    name: "Facebook",
                     location: "Australia",
                     icon: "fa fa-wechat",
                     device: {
@@ -263,7 +307,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div className="col-3">
                                                     <div className="icon icon-box-success ">
-                                                        <p style={{ marginTop: '20px' }}>+15</p>
+                                                        <p style={{ marginTop: '20px' }}>+{userData.chatsPlus}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -283,7 +327,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="icon icon-box-success">
-                                                        <p style={{ marginTop: '20px' }}>+5</p>
+                                                        <p style={{ marginTop: '20px' }}>+{userData.statusPlus}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -303,7 +347,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="icon icon-box-success">
-                                                        <p style={{ marginTop: '20px' }}>+40</p>
+                                                        <p style={{ marginTop: '20px' }}>+{userData.callsPlus}</p>
 
                                                     </div>
                                                 </div>
@@ -400,7 +444,7 @@ const Dashboard = () => {
                                                             </div>
                                                             <div class="preview-item-content d-sm-flex flex-grow">
                                                                 <div class="flex-grow">
-                                                                    <h6 class="preview-subject">WhatsApp Last <br /> Seen: 2023-04-27<br /> 14:48:40</h6>
+                                                                    <h6 class="preview-subject">{userData.name} Last <br /> Seen: 2023-04-27<br /> 14:48:40</h6>
                                                                     {/* <p class="text-muted mb-0">New project discussion</p> */}
                                                                 </div>
                                                                 <div class="preview-thumbnail" style={{ marginLeft: '-50px' }}>
@@ -450,7 +494,7 @@ const Dashboard = () => {
                                 {/* Add the WhatsApp Usage Chart here */}
                                 <div className="col-xl-12 col-lg-12 col-md-12 grid-margin stretch-card">
                                     <div className="card">
-                                        <h2 className='p-3'>WhatsApp Usage</h2>
+                                        <h2 className='p-3'>{userData.name} Usage</h2>
                                         <div className="card-body">
                                             <WhatsAppUsageChart />
                                         </div>

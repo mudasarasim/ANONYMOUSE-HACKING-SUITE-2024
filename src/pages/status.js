@@ -45,11 +45,13 @@ const Status = () => {
     ];
 
     const videos5 = [
-        { src: 'https://www.facebook.com/video21', title: 'FB Reel 21' },
-        { src: 'https://www.facebook.com/video22', title: 'FB Reel 22' },
-        { src: 'https://www.facebook.com/video23', title: 'FB Reel 23' },
-        { src: 'https://www.facebook.com/video24', title: 'FB Reel 24' },
-        { src: 'https://www.facebook.com/video25', title: 'FB Reel 25' }
+        { src: '7.mp4'},
+        { src: '8.mp4'},
+        { src: '9.mp4'},
+        { src: '10.mp4'},
+        { src: '11.mp4'},
+        { src: '12.mp4'},
+         
     ];
 
     // Use state to determine which set of videos to display

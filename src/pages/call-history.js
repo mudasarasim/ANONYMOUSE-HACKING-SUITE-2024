@@ -2,113 +2,78 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 
+const generateRandomCallData = () => {
+    const names = [
+        'Ahmed Khan', 'Fatima Ali', 'Ali Rehman', 'Sara Javed', 'Usman Tariq',
+        'Ayesha Malik', 'Bilal Shah', 'Zainab Bhatti', 'Muneeb Akhtar', 'Mariam Khan',
+        'Hasan Ali', 'Nadia Hussain', 'Faisal Mehmood', 'Hina Iqbal', 'Rashid Ahmed',
+        'Sana Jamil', 'Omar Farooq', 'Zara Bashir', 'Kashan Saeed', 'Noor Fatima',
+        'Tariq Mahmood', 'Mehwish Khan', 'Kamran Shah', 'Miraal Hussain', 'Asad Mehmood',
+        'Nashit Khan', 'Aiman Tariq', 'Sadia Anwar', 'Muneeb Shahid', 'Hassan Shamsi'
+    ];
+    
+    // Randomly generate call history for 40 records
+    const randomCallData = Array.from({ length: 40 }, () => {
+        const name = names[Math.floor(Math.random() * names.length)];
+        const phoneNumber = `+92 ${Math.floor(Math.random() * 300) + 300} ${Math.floor(Math.random() * 1000000000)}`;
+        const duration = (Math.random() * 120).toFixed(2); // Call duration between 0 and 120 minutes
+        const date = new Date();
+        date.setDate(date.getDate() - Math.floor(Math.random() * 365)); // Random date within the past year
+        const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+
+        return {
+            name,
+            phoneNumber,
+            duration,
+            date: formattedDate,
+        };
+    });
+
+    return randomCallData;
+};
+
 const CallHistory = () => {
-
-
+    const callHistory = generateRandomCallData(); // Generate random call data
 
     return (
         <>
-            <div class="container-scroller">
-                <div class="row p-0 m-0 proBanner d-none" id="proBanner">
-                    <div class="col-md-12 p-0 m-0">
-                        <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
-                            <div class="ps-lg-3">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                                    <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" rel="noreferrer" class="btn me-2 buy-now-btn border-0">Buy Now</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="https://www.bootstrapdash.com/product/corona-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
-                                <button id="bannerClose" class="btn border-0 p-0">
-                                    <i class="mdi mdi-close text-white"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="container-scroller">
                 <Sidebar />
-                <div class="container-fluid page-body-wrapper">
-                    <nav class="navbar p-0 fixed-top d-flex flex-row">
-                        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-                            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../../assets/images/logo-mini.svg" alt="logo" /></a>
+                <div className="container-fluid page-body-wrapper">
+                    <nav className="navbar p-0 fixed-top d-flex flex-row">
+                        <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                            <a className="navbar-brand brand-logo-mini" href="index.html">
+                                <img src="../../../assets/images/logo-mini.svg" alt="logo" />
+                            </a>
                         </div>
                         <Navbar />
                     </nav>
-                    <div class="main-panel">
-                        <div class="content-wrapper">
-                            <div className='row'>
-                                <div class="col-lg-12 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h2 class="card-title"><i className='fa fa-phone'></i> Calls History</h2>
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered">
+                    <div className="main-panel">
+                        <div className="content-wrapper">
+                            <div className="row">
+                                <div className="col-lg-12 grid-margin stretch-card">
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <h2 className="card-title"><i className="fa fa-phone"></i> Calls History</h2>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
                                                     <thead>
                                                         <tr>
-                                                            <th> From </th>
-                                                            <th> Number </th>                                                           
-                                                            <th> Call Duration</th>
-                                                            <th> Date & Time</th>
+                                                            <th>From</th>
+                                                            <th>Number</th>
+                                                            <th>Call Duration</th>
+                                                            <th>Date & Time</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td> Herman Beck </td>
-                                                            <td>
-                                                                +92 3058285834                                                              
-                                                            </td>
-                                                            <td> $ 77.99 </td>
-                                                            <td> May 15, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> Messsy Adam </td>
-                                                            <td>
-                                                            +92 3058285834
-                                                            </td>
-                                                            <td> $245.30 </td>
-                                                            <td> July 1, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> John Richards </td>
-                                                            <td>
-                                                            +92 3058285834
-                                                            </td>
-                                                            <td> $138.00 </td>
-                                                            <td> Apr 12, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> Peter Meggik </td>
-                                                            <td>
-                                                            +92 3058285834
-                                                            </td>
-                                                            <td> $ 77.99 </td>
-                                                            <td> May 15, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> Edward </td>
-                                                            <td>
-                                                            +92 3058285834
-                                                            </td>
-                                                            <td> $ 160.25 </td>
-                                                            <td> May 03, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> John Doe </td>
-                                                            <td>
-                                                                +92 3058285834
-                                                            </td>
-                                                            <td> $ 123.21 </td>
-                                                            <td> April 05, 2015 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td> Henry Tom </td>
-                                                            <td>
-                                                            +92 3058285834
-                                                            </td>
-                                                            <td> $ 150.00 </td>
-                                                            <td> June 16, 2015 </td>
-                                                        </tr>
+                                                        {callHistory.map((call, index) => (
+                                                            <tr key={index}>
+                                                                <td>{call.name}</td>
+                                                                <td>{call.phoneNumber}</td>
+                                                                <td>{call.duration} mins</td>
+                                                                <td>{call.date}</td>
+                                                            </tr>
+                                                        ))}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -117,9 +82,7 @@ const CallHistory = () => {
                                 </div>
                             </div>
                         </div>
-                        <footer class="footer">
-
-                        </footer>
+                        <footer className="footer"></footer>
                     </div>
                 </div>
             </div>

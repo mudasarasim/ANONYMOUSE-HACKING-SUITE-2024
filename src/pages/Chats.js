@@ -4,29 +4,33 @@ import Navbar from '../components/Navbar';
 import './Chat.css';
 
 const generateRandomUser = () => {
-    const names = ['Vincent Porter', 'Aiden Chavez', 'Sarah Blake', 'Nina Lee', 'John Doe', 'Alice Walker', 'Sophia Bennett', 'Liam Robinson'];
-    const statusMessages = ['left 7 mins ago', 'online', 'left 1 hour ago', 'offline', 'last seen 2 days ago'];
-    const imageUrls = [
-        'assets/faces/face1.jpg',
-        'assets/faces/face2.jpg',
-        'assets/faces/face3.jpg',
-        'assets/faces/face4.jpg',
-        'assets/faces/face5.jpg',
-        'assets/faces/face6.jpg',
-        'assets/faces/face7.jpg',
-        'assets/faces/face8.jpg',
-       
+    // List of Pakistani names
+    const names = [
+        'Ahmed Khan', 'Fatima Ali', 'Ali Rehman', 'Sara Javed', 'Usman Tariq',
+        'Ayesha Malik', 'Bilal Shah', 'Zainab Bhatti', 'Muneeb Akhtar', 'Mariam Khan',
+        'Hasan Ali', 'Nadia Hussain', 'Faisal Mehmood', 'Hina Iqbal', 'Rashid Ahmed',
+        'Sana Jamil', 'Omar Farooq', 'Zara Bashir', 'Kashan Saeed', 'Noor Fatima',
+        'Tariq Mahmood', 'Mehwish Khan', 'Kamran Shah', 'Miraal Hussain', 'Asad Mehmood'
     ];
 
+    const statusMessages = [
+        'left 7 mins ago', 'online', 'left 1 hour ago', 'offline', 'last seen 2 days ago'
+    ];
+
+    // List of 25 image URLs (face1.jpg to face25.jpg)
+    const imageUrls = Array.from({ length: 25 }, (_, index) => `avt.jpg`);
+
+    // Randomly select a name, status, and image
     const randomName = names[Math.floor(Math.random() * names.length)];
     const randomStatus = statusMessages[Math.floor(Math.random() * statusMessages.length)];
     const randomImage = imageUrls[Math.floor(Math.random() * imageUrls.length)];
     const isOnline = randomStatus === 'online';
 
+    // Generate unique messages for each user
     const messages = [
-        { text: 'Hey, how have you been?', sentByUser: Math.random() < 0.5 },
-        { text: 'What are you up to?', sentByUser: Math.random() < 0.5 },
-        { text: 'Let\'s catch up soon!', sentByUser: Math.random() < 0.5 },
+        { text: `Hey ${randomName.split(" ")[0]}, how have you been?`, sentByUser: Math.random() < 0.5 },
+        { text: `What are you up to, ${randomName.split(" ")[0]}?`, sentByUser: Math.random() < 0.5 },
+        { text: `Let’s catch up soon, ${randomName.split(" ")[0]}!`, sentByUser: Math.random() < 0.5 }
     ];
 
     return {
@@ -39,7 +43,7 @@ const generateRandomUser = () => {
 };
 
 const ChatBox = () => {
-    const users = Array.from({ length: 8 }, generateRandomUser);
+    const users = Array.from({ length: 25 }, generateRandomUser);  // Increased to 25 users
 
     const [selectedUser, setSelectedUser] = useState(users[0]); // Default to first user
 
@@ -96,12 +100,7 @@ const ChatBox = () => {
                                                             <small>Last seen: {selectedUser.status}</small>
                                                         </div>
                                                     </div>
-                                                    <div className="col-lg-6 hidden-sm text-right">
-                                                        <button className="btn btn-outline-secondary"><i className="fa fa-camera"></i></button>
-                                                        <button className="btn btn-outline-primary"><i className="fa fa-image"></i></button>
-                                                        <button className="btn btn-outline-info"><i className="fa fa-cogs"></i></button>
-                                                        <button className="btn btn-outline-warning"><i className="fa fa-question"></i></button>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div className="chat-history">
@@ -110,7 +109,7 @@ const ChatBox = () => {
                                                         <li key={index} className="clearfix">
                                                             <div className={`message-data ${msg.sentByUser ? 'text-right' : ''}`}>
                                                                 <span className="message-data-time">{msg.time}</span>
-                                                                {!msg.sentByUser && <img src={selectedUser.image} alt="avatar" />}
+                                                                {/* {!msg.sentByUser && <img src={selectedUser.image} alt="avatar" />} */}
                                                             </div>
                                                             <div className={`message ${msg.sentByUser ? 'my-message' : 'other-message'} ${msg.sentByUser ? 'float-right' : ''}`}>
                                                                 {msg.text}
