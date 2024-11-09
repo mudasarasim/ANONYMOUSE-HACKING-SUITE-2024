@@ -1,14 +1,17 @@
 import { useLocation, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Sidebar = () => {
-    //const location = useLocation(); // Get the current location
-
-    //const isActive = (path) => location.pathname === path; // Check if the path matches the current location
 
     const location = useLocation(); // Get the current location (route)
     
     // Track the active route by comparing with the current pathname
     const isActive = (path) => location.pathname === path;
+
+     // Scroll to top on location change
+     useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page
+    }, [location]); // Runs every time the location changes
 
    
     return (

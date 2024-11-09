@@ -1,14 +1,78 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
-// import './Status.css'; // Import custom CSS
 
 const Videos = () => {
-    const videos = [
-        { src: '2.mp4', title: 'Video 1' },
-        { src: '2.mp4', title: 'Video 2' },
-        { src: '2.mp4', title: 'Video 3' },
+    // Define the five different video arrays
+    const videos1 = [
+        { src: '1.mp4'},
+        { src: '2.mp4'},
+        { src: '3.mp4'},
+        { src: '4.mp4'},
+        { src: '5.mp4'},
+        { src: '6.mp4'},
+       
     ];
+
+    const videos2 = [
+        { src: '7.mp4'},
+        { src: '8.mp4'},
+        { src: '9.mp4'},
+        { src: '10.mp4'},
+        { src: '11.mp4'},
+        { src: '12.mp4'},
+       
+    ];
+
+    const videos3 = [
+        { src: '13.mp4'},
+        { src: '14.mp4'},
+        { src: '15.mp4'},
+        { src: '16.mp4'},
+        { src: '17.mp4'},
+        { src: '18.mp4'},
+       
+    ];
+
+    const videos4 = [
+        { src: '19.mp4'},
+        { src: '20.mp4'},
+        { src: '21.mp4'},
+        { src: '22.mp4'},
+        { src: '23.mp4'},
+        { src: '24.mp4'},
+       
+    ];
+
+    const videos5 = [
+        { src: '7.mp4'},
+        { src: '8.mp4'},
+        { src: '9.mp4'},
+        { src: '10.mp4'},
+        { src: '11.mp4'},
+        { src: '12.mp4'},
+         
+    ];
+
+    // Use state to determine which set of videos to display
+    const [videoId, setVideoId] = useState(1); // Default videoId is 1
+
+    // Extract videoId from URL query string
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get('videoId'), 10);
+        if (id >= 1 && id <= 5) {
+            setVideoId(id);
+        }
+    }, []);
+
+    // Map the video arrays to a condition based on the videoId
+    const videos = 
+        videoId === 1 ? videos1 :
+        videoId === 2 ? videos2 :
+        videoId === 3 ? videos3 :
+        videoId === 4 ? videos4 :
+        videos5;
 
     const videoRefs = useRef(videos.map(() => React.createRef()));
 
@@ -49,7 +113,7 @@ const Videos = () => {
                 <div className="main-panel">
                     <div className="content-wrapper">
                         <div className="row">
-                            <h2 className='mb-4'><i className='fa fa-play'></i> Videos</h2>
+                            <h2 className='mb-4'><i className='fa fa-eye'></i> Status, Reels And Stories</h2>
                             {videos.map((video, index) => (
                                 <div key={index} className="col-md-4">
                                     <div className="card video-card">

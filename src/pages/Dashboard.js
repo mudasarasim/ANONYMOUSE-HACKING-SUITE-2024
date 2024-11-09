@@ -41,6 +41,7 @@ const Dashboard = () => {
             // Fetch user data based on id (you can fetch data from an API or set it manually)
             if (id === "1") {
                 setUserData({
+                    id: 1,
                     chats: 120,
                     chatsPlus: 21,
                     status: 90,
@@ -63,6 +64,7 @@ const Dashboard = () => {
                 });
             } else if (id === "2") {
                 setUserData({
+                    id: 2,
                     chats: 100,
                     chatsPlus: 10,
                     status: 80,
@@ -85,12 +87,13 @@ const Dashboard = () => {
                 });
             } else if (id === "3") {
                 setUserData({
+                    id: 3,
                     chats: 150,
                     chatsPlus: 11,
                     status: 95,
-                    status: 17,
+                    statusPlus: 17,
                     calls: 300,
-                    calls: 9,
+                    callsPlus: 9,
                     name: "Whatsapp",
                     location: "Canada",
                     icon: "fa fa-whatsapp",
@@ -107,6 +110,7 @@ const Dashboard = () => {
                 });
             } else if (id === "4") {
                 setUserData({
+                    id: 4,
                     chats: 180,
                     chatsPlus: 22,
                     status: 75,
@@ -129,6 +133,7 @@ const Dashboard = () => {
                 });
             } else if (id === "5") {
                 setUserData({
+                    id: 5,
                     chats: 200,
                     chatsPlus: 41,
                     status: 85,
@@ -151,6 +156,7 @@ const Dashboard = () => {
                 });
             }else if (id === "11") {
                 setUserData({
+                    id: 11,
                     chats: 120,
                     chatsPlus: 10,
                     status: 90,
@@ -173,6 +179,7 @@ const Dashboard = () => {
                 });
             }else if (id === "22") {
                 setUserData({
+                    id: 22,
                     chats: 400,
                     chatsPlus: 68,
                     status: 120,
@@ -195,6 +202,7 @@ const Dashboard = () => {
                 });
             }else if (id === "33") {
                 setUserData({
+                    id: 33,
                     chats: 650,
                     chatsPlus: 61,
                     status: 195,
@@ -217,6 +225,7 @@ const Dashboard = () => {
                 });
             } else if (id === "44") {
                 setUserData({
+                    id: 44,
                     chats: 880,
                     chatsPlus: 280,
                     status: 275,
@@ -239,6 +248,7 @@ const Dashboard = () => {
                 });
             } else if (id === "55") {
                 setUserData({
+                    id: 55,
                     chats: 800,
                     chatsPlus: 120,
                     status: 285,
@@ -297,7 +307,7 @@ const Dashboard = () => {
                             <div class="row">
                             <div className="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div className="card">
-                                        <Link to={'/chatbox'} style={{ textDecoration: 'none' }} className="card-body">
+                                        <Link to={`/chatbox?id=${userData.id}`} style={{ textDecoration: 'none' }} className="card-body">
                                             <div className="row">
                                                 <div className="col-9">
                                                     <div className="d-flex align-items-center align-self-start">
@@ -317,7 +327,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={'/status'} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/status?videoId=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
@@ -337,7 +347,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={'/call-history'} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/call-history?id=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
@@ -358,7 +368,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={'/location'} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/location?id=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
