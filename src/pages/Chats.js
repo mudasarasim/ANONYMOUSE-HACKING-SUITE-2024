@@ -3,33 +3,45 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import './Chat.css';
 
-const ChatBox = () => {
-    const users = [
-        {
-            name: 'Vincent Porter',
-            status: 'left 7 mins ago',
-            isOnline: false,
-            image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-            messages: [
-                { text: 'Hey, how have you been?', time: '10:10 AM, Today', sentByUser: false },
-                { text: 'I’m good, thanks for asking!', time: '10:15 AM, Today', sentByUser: true },
-            ],
-        },
-        {
-            name: 'Aiden Chavez',
-            status: 'online',
-            isOnline: true,
-            image: 'https://bootdey.com/img/Content/avatar/avatar2.png',
-            messages: [
-                { text: 'Hi Aiden, how are you? How is the project coming along?', time: '10:10 AM, Today', sentByUser: false },
-                { text: 'Are we meeting today?', time: '10:12 AM, Today', sentByUser: true },
-                { text: 'Project has been finished and I have results to show you.', time: '10:15 AM, Today', sentByUser: true },
-            ],
-        },
-        // Add more users as needed
+const generateRandomUser = () => {
+    const names = ['Vincent Porter', 'Aiden Chavez', 'Sarah Blake', 'Nina Lee', 'John Doe', 'Alice Walker', 'Sophia Bennett', 'Liam Robinson'];
+    const statusMessages = ['left 7 mins ago', 'online', 'left 1 hour ago', 'offline', 'last seen 2 days ago'];
+    const imageUrls = [
+        'assets/faces/face1.jpg',
+        'assets/faces/face2.jpg',
+        'assets/faces/face3.jpg',
+        'assets/faces/face4.jpg',
+        'assets/faces/face5.jpg',
+        'assets/faces/face6.jpg',
+        'assets/faces/face7.jpg',
+        'assets/faces/face8.jpg',
+       
     ];
 
-    const [selectedUser, setSelectedUser] = useState(users[1]); // Default to Aiden Chavez
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomStatus = statusMessages[Math.floor(Math.random() * statusMessages.length)];
+    const randomImage = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+    const isOnline = randomStatus === 'online';
+
+    const messages = [
+        { text: 'Hey, how have you been?', sentByUser: Math.random() < 0.5 },
+        { text: 'What are you up to?', sentByUser: Math.random() < 0.5 },
+        { text: 'Let\'s catch up soon!', sentByUser: Math.random() < 0.5 },
+    ];
+
+    return {
+        name: randomName,
+        status: randomStatus,
+        isOnline,
+        image: randomImage,
+        messages: messages
+    };
+};
+
+const ChatBox = () => {
+    const users = Array.from({ length: 8 }, generateRandomUser);
+
+    const [selectedUser, setSelectedUser] = useState(users[0]); // Default to first user
 
     const handleUserClick = (user) => {
         setSelectedUser(user);
