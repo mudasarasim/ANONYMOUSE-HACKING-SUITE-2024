@@ -8,271 +8,271 @@ import { useLocation } from 'react-router-dom'; // To use the location hook for 
 
 
 const Dashboard = () => {
-        // Using React's useLocation to get the current URL
-        const location = useLocation();
-        const queryParams = new URLSearchParams(location.search);
-        const id = queryParams.get("id"); // Extract user id from the URL query
-    
-        // Default user data
-        const [userData, setUserData] = useState({
-            chats: 220,
-            chatsPlus: 20,
-            status: 86,
-            statusPlus: 16,
-            calls: 510,
-            callsPlus: 10,
-            name: "Whatsapp",
-            location: "Pakistan",
-            icon: "fa fa-whatsapp",
-            device: {
-                name: "Samsung S20",
-                model: "samsung",
-                os: "10",
-                lastSeen: "2023-04-27 14:48:40",
-                batteryLevel: "98%",
-                wifiStatus: "On",
-                currentDevice: "Pakistan WhatsApp",
-                dStatus: "Online"
-            }
-        });
-    
-        // Simulate changing device info based on user id
-        useEffect(() => {
-            // Fetch user data based on id (you can fetch data from an API or set it manually)
-            if (id === "1") {
-                setUserData({
-                    id: 1,
-                    chats: 120,
-                    chatsPlus: 21,
-                    status: 90,
-                    statusPlus: 7,
-                    calls: 220,
-                    callsPlus: 18,
-                    name: "Whatsapp",
-                    icon: "fa fa-whatsapp",
-                    location: "Pakistan",
-                    device: {
-                        name: "iPhone 13",
-                        model: "iphone",
-                        os: "iOS 16",
-                        lastSeen: "2023-05-15 09:12:34",
-                        batteryLevel: "85%",
-                        wifiStatus: "Off",
-                        currentDevice: "Pakistan WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            } else if (id === "2") {
-                setUserData({
-                    id: 2,
-                    chats: 100,
-                    chatsPlus: 10,
-                    status: 80,
-                    statusPlus: 8,
-                    calls: 200,
-                    name: "Whatsapp",
-                    callsPlus: 12,
-                    location: "India",
-                    icon: "fa fa-whatsapp",
-                    device: {
-                        name: "Google Pixel 6",
-                        model: "pixel",
-                        os: "Android 12",
-                        lastSeen: "2023-06-18 18:30:20",
-                        batteryLevel: "75%",
-                        wifiStatus: "On",
-                        currentDevice: "India WhatsApp",
-                        dStatus: "Online"
-                    }
-                });
-            } else if (id === "3") {
-                setUserData({
-                    id: 3,
-                    chats: 150,
-                    chatsPlus: 11,
-                    status: 95,
-                    statusPlus: 17,
-                    calls: 300,
-                    callsPlus: 9,
-                    name: "Whatsapp",
-                    location: "Canada",
-                    icon: "fa fa-whatsapp",
-                    device: {
-                        name: "OnePlus 9",
-                        model: "oneplus",
-                        os: "Android 11",
-                        lastSeen: "2023-07-22 10:55:10",
-                        batteryLevel: "60%",
-                        wifiStatus: "On",
-                        currentDevice: "Canada WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            } else if (id === "4") {
-                setUserData({
-                    id: 4,
-                    chats: 180,
-                    chatsPlus: 22,
-                    status: 75,
-                    statusPlus: 19,
-                    calls: 180,
-                    callsPlus: 31,
-                    name: "Whatsapp",
-                    location: "UK",
-                    icon: "fa fa-whatsapp",
-                    device: {
-                        name: "Samsung Galaxy S21",
-                        model: "samsung",
-                        os: "Android 13",
-                        lastSeen: "2023-08-05 13:00:01",
-                        batteryLevel: "95%",
-                        wifiStatus: "On",
-                        currentDevice: "UK WhatsApp",
-                        dStatus: "Online"
-                    }
-                });
-            } else if (id === "5") {
-                setUserData({
-                    id: 5,
-                    chats: 200,
-                    chatsPlus: 41,
-                    status: 85,
-                    statusPlus: 27,
-                    calls: 400,
-                    callsPlus: 30,
-                    name: "Whatsapp",
-                    location: "Australia",
-                    icon: "fa fa-whatsapp",
-                    device: {
-                        name: "Huawei P40",
-                        model: "huawei",
-                        os: "HarmonyOS",
-                        lastSeen: "2023-09-13 15:45:25",
-                        batteryLevel: "92%",
-                        wifiStatus: "Off",
-                        currentDevice: "Australia WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            }else if (id === "11") {
-                setUserData({
-                    id: 11,
-                    chats: 120,
-                    chatsPlus: 10,
-                    status: 90,
-                    statusPlus: 13,
-                    calls: 220,
-                    callsPlus: 20,
-                    name: "Facebook",
-                    icon: "fa fa-wechat",
-                    location: "Pakistan",
-                    device: {
-                        name: "iPhone 13",
-                        model: "iphone",
-                        os: "iOS 16",
-                        lastSeen: "2023-05-15 09:12:34",
-                        batteryLevel: "85%",
-                        wifiStatus: "Off",
-                        currentDevice: "Pakistan WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            }else if (id === "22") {
-                setUserData({
-                    id: 22,
-                    chats: 400,
-                    chatsPlus: 68,
-                    status: 120,
-                    statusPlus: 33,
-                    calls: 500,
-                    callsPlus: 57,
-                    name: "Facebook",
-                    location: "India",
-                    icon: "fa fa-wechat",
-                    device: {
-                        name: "Google Pixel 6",
-                        model: "pixel",
-                        os: "Android 12",
-                        lastSeen: "2023-06-18 18:30:20",
-                        batteryLevel: "75%",
-                        wifiStatus: "On",
-                        currentDevice: "India WhatsApp",
-                        dStatus: "Online"
-                    }
-                });
-            }else if (id === "33") {
-                setUserData({
-                    id: 33,
-                    chats: 650,
-                    chatsPlus: 61,
-                    status: 195,
-                    statusPlus: 42,
-                    calls: 500,
-                    callsPlus: 11,
-                    name: "Facebook",
-                    location: "Canada",
-                    icon: "fa fa-wechat",
-                    device: {
-                        name: "OnePlus 9",
-                        model: "oneplus",
-                        os: "Android 11",
-                        lastSeen: "2023-07-22 10:55:10",
-                        batteryLevel: "60%",
-                        wifiStatus: "On",
-                        currentDevice: "Canada WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            } else if (id === "44") {
-                setUserData({
-                    id: 44,
-                    chats: 880,
-                    chatsPlus: 280,
-                    status: 275,
-                    statusPlus: 75,
-                    calls: 480,
-                    callsPlus: 90,
-                    name: "Facebook",
-                    location: "UK",
-                    icon: "fa fa-wechat",
-                    device: {
-                        name: "Samsung Galaxy S21",
-                        model: "samsung",
-                        os: "Android 13",
-                        lastSeen: "2023-08-05 13:00:01",
-                        batteryLevel: "95%",
-                        wifiStatus: "On",
-                        currentDevice: "UK WhatsApp",
-                        dStatus: "Online"
-                    }
-                });
-            } else if (id === "55") {
-                setUserData({
-                    id: 55,
-                    chats: 800,
-                    chatsPlus: 120,
-                    status: 285,
-                    statusPlus: 34,
-                    calls: 400,
-                    callsPlus: 40,
-                    name: "Facebook",
-                    location: "Australia",
-                    icon: "fa fa-wechat",
-                    device: {
-                        name: "Huawei P40",
-                        model: "huawei",
-                        os: "HarmonyOS",
-                        lastSeen: "2023-09-13 15:45:25",
-                        batteryLevel: "92%",
-                        wifiStatus: "Off",
-                        currentDevice: "Australia WhatsApp",
-                        dStatus: "Offline"
-                    }
-                });
-            }
-            // Add additional conditions for more users if needed
-        }, [id]);
-    
+    // Using React's useLocation to get the current URL
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const id = queryParams.get("id"); // Extract user id from the URL query
+
+    // Default user data
+    const [userData, setUserData] = useState({
+        chats: 220,
+        chatsPlus: 20,
+        status: 86,
+        statusPlus: 16,
+        calls: 510,
+        callsPlus: 10,
+        name: "Whatsapp",
+        location: "Pakistan",
+        icon: "fa fa-whatsapp",
+        device: {
+            name: "Samsung S20",
+            model: "samsung",
+            os: "10",
+            lastSeen: "2023-04-27 14:48:40",
+            batteryLevel: "98%",
+            wifiStatus: "On",
+            currentDevice: "Pakistan WhatsApp",
+            dStatus: "Online"
+        }
+    });
+
+    // Simulate changing device info based on user id
+    useEffect(() => {
+        // Fetch user data based on id (you can fetch data from an API or set it manually)
+        if (id === "1") {
+            setUserData({
+                id: 1,
+                chats: 120,
+                chatsPlus: 21,
+                status: 90,
+                statusPlus: 7,
+                calls: 220,
+                callsPlus: 18,
+                name: "Whatsapp",
+                icon: "fa fa-whatsapp",
+                location: "Pakistan",
+                device: {
+                    name: "iPhone 13",
+                    model: "iphone",
+                    os: "iOS 16",
+                    lastSeen: "2023-05-15 09:12:34",
+                    batteryLevel: "85%",
+                    wifiStatus: "Off",
+                    currentDevice: "Pakistan WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        } else if (id === "2") {
+            setUserData({
+                id: 2,
+                chats: 100,
+                chatsPlus: 10,
+                status: 80,
+                statusPlus: 8,
+                calls: 200,
+                name: "Whatsapp",
+                callsPlus: 12,
+                location: "India",
+                icon: "fa fa-whatsapp",
+                device: {
+                    name: "Google Pixel 6",
+                    model: "pixel",
+                    os: "Android 12",
+                    lastSeen: "2023-06-18 18:30:20",
+                    batteryLevel: "75%",
+                    wifiStatus: "On",
+                    currentDevice: "India WhatsApp",
+                    dStatus: "Online"
+                }
+            });
+        } else if (id === "3") {
+            setUserData({
+                id: 3,
+                chats: 150,
+                chatsPlus: 11,
+                status: 95,
+                statusPlus: 17,
+                calls: 300,
+                callsPlus: 9,
+                name: "Whatsapp",
+                location: "Canada",
+                icon: "fa fa-whatsapp",
+                device: {
+                    name: "OnePlus 9",
+                    model: "oneplus",
+                    os: "Android 11",
+                    lastSeen: "2023-07-22 10:55:10",
+                    batteryLevel: "60%",
+                    wifiStatus: "On",
+                    currentDevice: "Canada WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        } else if (id === "4") {
+            setUserData({
+                id: 4,
+                chats: 180,
+                chatsPlus: 22,
+                status: 75,
+                statusPlus: 19,
+                calls: 180,
+                callsPlus: 31,
+                name: "Whatsapp",
+                location: "UK",
+                icon: "fa fa-whatsapp",
+                device: {
+                    name: "Samsung Galaxy S21",
+                    model: "samsung",
+                    os: "Android 13",
+                    lastSeen: "2023-08-05 13:00:01",
+                    batteryLevel: "95%",
+                    wifiStatus: "On",
+                    currentDevice: "UK WhatsApp",
+                    dStatus: "Online"
+                }
+            });
+        } else if (id === "5") {
+            setUserData({
+                id: 5,
+                chats: 200,
+                chatsPlus: 41,
+                status: 85,
+                statusPlus: 27,
+                calls: 400,
+                callsPlus: 30,
+                name: "Whatsapp",
+                location: "Australia",
+                icon: "fa fa-whatsapp",
+                device: {
+                    name: "Huawei P40",
+                    model: "huawei",
+                    os: "HarmonyOS",
+                    lastSeen: "2023-09-13 15:45:25",
+                    batteryLevel: "92%",
+                    wifiStatus: "Off",
+                    currentDevice: "Australia WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        } else if (id === "11") {
+            setUserData({
+                id: 11,
+                chats: 120,
+                chatsPlus: 10,
+                status: 90,
+                statusPlus: 13,
+                calls: 220,
+                callsPlus: 20,
+                name: "Facebook",
+                icon: "fa fa-wechat",
+                location: "Pakistan",
+                device: {
+                    name: "iPhone 13",
+                    model: "iphone",
+                    os: "iOS 16",
+                    lastSeen: "2023-05-15 09:12:34",
+                    batteryLevel: "85%",
+                    wifiStatus: "Off",
+                    currentDevice: "Pakistan WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        } else if (id === "22") {
+            setUserData({
+                id: 22,
+                chats: 400,
+                chatsPlus: 68,
+                status: 120,
+                statusPlus: 33,
+                calls: 500,
+                callsPlus: 57,
+                name: "Facebook",
+                location: "India",
+                icon: "fa fa-wechat",
+                device: {
+                    name: "Google Pixel 6",
+                    model: "pixel",
+                    os: "Android 12",
+                    lastSeen: "2023-06-18 18:30:20",
+                    batteryLevel: "75%",
+                    wifiStatus: "On",
+                    currentDevice: "India WhatsApp",
+                    dStatus: "Online"
+                }
+            });
+        } else if (id === "33") {
+            setUserData({
+                id: 33,
+                chats: 650,
+                chatsPlus: 61,
+                status: 195,
+                statusPlus: 42,
+                calls: 500,
+                callsPlus: 11,
+                name: "Facebook",
+                location: "Canada",
+                icon: "fa fa-wechat",
+                device: {
+                    name: "OnePlus 9",
+                    model: "oneplus",
+                    os: "Android 11",
+                    lastSeen: "2023-07-22 10:55:10",
+                    batteryLevel: "60%",
+                    wifiStatus: "On",
+                    currentDevice: "Canada WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        } else if (id === "44") {
+            setUserData({
+                id: 44,
+                chats: 880,
+                chatsPlus: 280,
+                status: 275,
+                statusPlus: 75,
+                calls: 480,
+                callsPlus: 90,
+                name: "Facebook",
+                location: "UK",
+                icon: "fa fa-wechat",
+                device: {
+                    name: "Samsung Galaxy S21",
+                    model: "samsung",
+                    os: "Android 13",
+                    lastSeen: "2023-08-05 13:00:01",
+                    batteryLevel: "95%",
+                    wifiStatus: "On",
+                    currentDevice: "UK WhatsApp",
+                    dStatus: "Online"
+                }
+            });
+        } else if (id === "55") {
+            setUserData({
+                id: 55,
+                chats: 800,
+                chatsPlus: 120,
+                status: 285,
+                statusPlus: 34,
+                calls: 400,
+                callsPlus: 40,
+                name: "Facebook",
+                location: "Australia",
+                icon: "fa fa-wechat",
+                device: {
+                    name: "Huawei P40",
+                    model: "huawei",
+                    os: "HarmonyOS",
+                    lastSeen: "2023-09-13 15:45:25",
+                    batteryLevel: "92%",
+                    wifiStatus: "Off",
+                    currentDevice: "Australia WhatsApp",
+                    dStatus: "Offline"
+                }
+            });
+        }
+        // Add additional conditions for more users if needed
+    }, [id]);
+
     return (
         <>
             <div class="container-scroller">
@@ -305,7 +305,7 @@ const Dashboard = () => {
                     <div class="main-panel">
                         <div class="content-wrapper">
                             <div class="row">
-                            <div className="col-xl-6 col-sm-6 grid-margin stretch-card">
+                                <div className="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div className="card">
                                         <Link to={`/chatbox?id=${userData.id}`} style={{ textDecoration: 'none' }} className="card-body">
                                             <div className="row">
@@ -327,7 +327,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={`/status?videoId=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/status?videoId=${userData.id}`} style={{ textDecoration: 'none' }} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
@@ -347,7 +347,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={`/call-history?id=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/call-history?id=${userData.id}`} style={{ textDecoration: 'none' }} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
@@ -368,7 +368,7 @@ const Dashboard = () => {
                                 </div>
                                 <div class="col-xl-6 col-sm-6 grid-margin stretch-card">
                                     <div class="card">
-                                        <Link to={`/location?id=${userData.id}`} style={{textDecoration: 'none'}} class="card-body">
+                                        <Link to={`/location?id=${userData.id}`} style={{ textDecoration: 'none' }} class="card-body">
                                             <div class="row">
                                                 <div class="col-9">
                                                     <div class="d-flex align-items-center align-self-start">
@@ -388,117 +388,97 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="col-lg-12 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h2 class="card-title">Device Information</h2>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-user bg-success" style={{ fontSize: '26px', padding: '8px 15px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Device Name : <br /> {userData.device.name}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-mobile bg-success" style={{ fontSize: '26px', padding: '8px 15px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Device Model : <br /> {userData.device.model}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
+                                                            </div>
+                                                        </td>
 
-                                <div class="col-md-12 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <h2 class="card-title mb-1">Device Information</h2>
-                                                {/* <p class="text-muted mb-1">Your data status</p> */}
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="preview-list">
-                                                        <div class="preview-item border-bottom">
-                                                            <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-success">
-                                                                    <i class="fa fa-user"></i>
-                                                                </div>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-info bg-success" style={{ fontSize: '26px', padding: '8px 15px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Device OS : <br /> Version : {userData.device.os}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
                                                             </div>
-                                                            <div class="preview-item-content d-sm-flex flex-grow">
-                                                                <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Device Name : </h6>
-                                                                    <h6 class="preview-subject">{userData.device.name}</h6>
-                                                                    {/* <p class="text-muted mb-0">Broadcast web app mockup</p> */}
-                                                                </div>
-                                                                <div class="preview-thumbnail">
-                                                                    <div class="preview-icon bg-success">
-                                                                        <i class="fa fa-mobile"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Device Model : {userData.device.model}</h6>
-                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
-                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-desktop bg-success" style={{ fontSize: '26px', padding: '8px 10px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Device Status : <br /> {userData.device.dStatus}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
                                                             </div>
-                                                        </div>
-                                                        <div class="preview-item border-bottom">
-                                                            <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-success">
-                                                                    <i class="fa fa-info"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="preview-item-content d-sm-flex flex-grow">
-                                                                <div class="flex-grow">
-                                                                    <h6 class="preview-subject">Device OS </h6>
-                                                                    <h6 class="preview-subject"> Version: {userData.device.os}</h6>
-                                                                    {/* <p class="text-muted mb-0">Upload new design</p> */}
-                                                                </div>
-                                                                <div class="preview-thumbnail" style={{ marginLeft: '10px' }}>
-                                                                    <div class="preview-icon bg-success">
-                                                                        <i class="fa fa-desktop"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Device Status :  {userData.device.dStatus}</h6>
-                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="preview-item border-bottom">
-                                                            <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-success">
-                                                                    <i class="mdi mdi-clock"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="preview-item-content d-sm-flex flex-grow">
-                                                                <div class="flex-grow">
-                                                                    <h6 class="preview-subject">{userData.name} Last <br /> Seen: 2023-04-27<br /> 14:48:40</h6>
-                                                                    {/* <p class="text-muted mb-0">New project discussion</p> */}
-                                                                </div>
-                                                                <div class="preview-thumbnail" style={{ marginLeft: '-50px' }}>
-                                                                    <div class="preview-icon bg-success">
-                                                                        <i class="fa fa-battery"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Battery Level: {userData.device.batteryLevel}</h6>
-                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="preview-item border-bottom">
-                                                            <div class="preview-thumbnail">
-                                                                <div class="preview-icon bg-success">
-                                                                    <i class="fa fa-wifi"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="preview-item-content d-sm-flex flex-grow">
-                                                                <div class="flex-grow">
-                                                                    <h6 class="preview-subject mt-2">WiFi:  On</h6>
-                                                                    {/* <p class="text-muted mb-0">Sent release details to team</p> */}
-                                                                </div>
+                                                        </td>
 
-                                                                <div class="preview-thumbnail" style={{ marginLeft: '130px' }}>
-                                                                    <div class="preview-icon bg-success">
-                                                                        <i class="fa fa-desktop"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mr-auto text-sm-right pt-2 pt-sm-0 preview-item-content d-sm-flex flex-grow">
-                                                                    <h6 class="preview-subject mt-2">Current Device: {userData.device.currentDevice}</h6>
-                                                                    {/* <h6 class="preview-subject">Samsung S20</h6> */}
-                                                                </div>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="mdi mdi-clock bg-success" style={{ fontSize: '26px', padding: '8px 8px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}> WhatsApp Last : <br /> Seen : {userData.device.lastSeen}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
                                                             </div>
-                                                        </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-battery bg-success" style={{ fontSize: '26px', padding: '8px 10px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Battery Level : <br /> {userData.device.batteryLevel}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
+                                                            </div>
+                                                        </td>
 
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-wifi bg-success" style={{ fontSize: '26px', padding: '6px 10px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px', marginTop: '10px' }}> Wifi : {userData.device.wifiStatus}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style={{ display: 'flex', alignItems: 'left', justifyContent: 'left' }}>
+                                                                <i class="fa fa-desktop bg-success" style={{ fontSize: '26px', padding: '8px 10px' }}>
+                                                                </i>
+                                                                <h6 class="preview-subject" style={{ marginLeft: '16px' }}>Currrent Device : <br /> {userData.device.currentDevice}</h6>
+                                                                {/* <h6 class="preview-subject"></h6> */}
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        
                             <div className="row">
 
                                 {/* Add the WhatsApp Usage Chart here */}
@@ -530,9 +510,9 @@ const Dashboard = () => {
                                     <div className="card">
                                         <h2 className='p-3'><i className='fa fa-map-marker'></i> Current Location</h2>
                                         <iframe
-                                        title='uty'
+                                            title='uty'
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462449.285138231!2d66.37242990787928!3d30.375321792177443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf5eac1f7687%3A0x67fb2e5a2d4284e6!2sPakistan!5e0!3m2!1sen!2sus!4v1699376633372!5m2!1sen!2sus"
-                                            style={{width: '100%'}}
+                                            style={{ width: '100%' }}
                                             height="450"
                                             allowfullscreen=""
                                             loading="lazy"
