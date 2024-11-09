@@ -317,7 +317,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div className="col-3">
                                                     <div className="icon icon-box-success ">
-                                                        <p style={{ marginTop: '20px' }}>+{userData.chatsPlus}</p>
+                                                        <p style={{ marginTop: '60px' }}>+{userData.chatsPlus}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -337,7 +337,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="icon icon-box-success">
-                                                        <p style={{ marginTop: '20px' }}>+{userData.statusPlus}</p>
+                                                        <p style={{ marginTop: '60px' }}>+{userData.statusPlus}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -357,7 +357,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="icon icon-box-success">
-                                                        <p style={{ marginTop: '20px' }}>+{userData.callsPlus}</p>
+                                                        <p style={{ marginTop: '60px' }}>+{userData.callsPlus}</p>
 
                                                     </div>
                                                 </div>
@@ -378,7 +378,7 @@ const Dashboard = () => {
                                                 </div>
                                                 {/* <div class="col-3">
                                                     <div class="icon icon-box-success ">
-                                                        <p style={{ marginTop: '20px' }}>+60</p>
+                                                        <p style={{ marginTop: '60px' }}>+60</p>
 
                                                     </div>
                                                 </div> */}
