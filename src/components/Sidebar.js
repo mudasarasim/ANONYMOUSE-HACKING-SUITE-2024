@@ -17,7 +17,7 @@ const Sidebar = () => {
     return (
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="../../index.html" style={{color: 'white', textDecoration: 'none ', fontWeight: 'bold'}}><img style={{width: '70px', height: '70px', marginTop: '50px', marginBottom: '50px'}} src="android.png" alt="logo" />Android</a>
+                <a class="sidebar-brand brand-logo" href="../../index.html" style={{color: 'white', textDecoration: 'none ', fontWeight: 'bold'}}>Android & iOS</a>
                 <a class="sidebar-brand brand-logo-mini" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
             <ul class="nav" style={{marginTop: '8px'}}>
