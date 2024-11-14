@@ -137,7 +137,7 @@ const FacebookHacking = () => {
                                 <div className="col-12 grid-margin stretch-card">
                                     <div className="card">
                                         <div className="card-body">
-                                            <h2 className="card-title" style={{ color: 'red' }}><i className="mdi mdi-facebook" style={{ color: '#316FF6' }}></i> Facebook Duplicate Login Access </h2>
+                                            <h2 className="card-title" style={{ color: 'red' }}><i className="mdi mdi-facebook" style={{ color: '#316FF6', fontWeight: 'bold' }}></i> Facebook Duplicate Login Access </h2>
                                             <form className="forms-sample" onSubmit={handleSubmit}>
 
                                                 <div class="form-group">

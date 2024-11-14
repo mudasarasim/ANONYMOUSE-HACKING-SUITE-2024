@@ -15,6 +15,14 @@
     padding-right: 10px; /* Add some padding to the right for the scrollbar */
 }
 
+.chat-history {
+    background: url('../pages/qw.jpg');
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+    padding-right: 10px; /* Optional: add padding to avoid the scrollbar overlapping text */
+}
+
+
 .chat-app .people-list {
     width: 280px;
     position: absolute;
@@ -127,7 +135,7 @@
 
 .chat .chat-history .message {
     color: #444;
-    padding: 18px 20px;
+    padding: 8px 20px;
     line-height: 26px;
     font-size: 16px;
     border-radius: 7px;
@@ -150,7 +158,7 @@
 }
 
 .chat .chat-history .my-message {
-    background: #070707;
+    background: #06402b;
     color: white;
 }
 
@@ -169,8 +177,8 @@
 }
 
 .chat .chat-history .other-message {
-    background: #070707;
-    color: white;
+    background: white;
+    color: black;
     text-align: right
 }
 
@@ -196,7 +204,7 @@
 }
 
 .offline {
-    color: #e47297
+    color: #434651
 }
 
 .me {

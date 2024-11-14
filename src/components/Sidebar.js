@@ -44,7 +44,7 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-10px'}}> <Link class="nav-link" to={'/whatsapp-hacking'}>WhatsApp Account Hacking </Link></li>
+                            <li class="nav-item" style={{marginLeft: '-22px', }}> <Link class="nav-link" to={'/whatsapp-hacking'}>WhatsApp Duplicate Login Access </Link></li>
                         </ul>
                     </div>
                 </li>
@@ -59,7 +59,7 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/facebook-hacking'} class="nav-link">Facebook duplicate login access </Link></li>
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/facebook-hacking'} class="nav-link">Facebook Duplicate Login Access </Link></li>
                         </ul>
                     </div>
                 </li>
@@ -74,7 +74,7 @@ const Sidebar = () => {
                     
                     <div class="collapse" id="sic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/instagram-hacking'} class="nav-link">Instagram duplicate login access </Link></li>
+                            <li class="nav-item" style={{marginLeft: '-40px'}}> <Link to={'/instagram-hacking'} class="nav-link">Instagram Duplicate Login Access </Link></li>
                         </ul>
                     </div>
                 </li>
@@ -221,7 +221,7 @@ const Sidebar = () => {
                         <span class="menu-icon">
                             <i class="fa fa-camera"></i>
                         </span>
-                        <span class="menu-title"> Camera / Gallery</span>
+                        <span class="menu-title"> Recently Screenshots</span>
                         <i class="menu-arrow"></i>
                     </Link>
                 </li>

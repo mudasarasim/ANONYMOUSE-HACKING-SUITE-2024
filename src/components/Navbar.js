@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
       <div class=" d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <img style={{ width: '50px', height: '55px', marginTop: '10px', marginBottom: '50px' }} src="logo.png" alt="logo" /><a class="sidebar-brand brand-logo" href="../../index.html" style={{ color: 'white', textDecoration: 'none ', fontWeight: 'bold', fontSize: '30px', marginTop: '-35px', marginLeft: '10px' }}>Anonymous Hacking Suite 2024</a>
+        <img style={{ width: '50px', height: '55px', marginTop: '10px', marginBottom: '50px' }} src="logo.png" alt="logo" /><a class="sidebar-brand brand-logo" href="../../index.html" style={{ color: 'white', textDecoration: 'none ', fontWeight: 'bold', fontFamily:  'Helvetica', fontSize: '30px', marginTop: '-35px', marginLeft: '10px' }}>Anonymous Hacking Suite 2024</a>
         {/* <a class="sidebar-brand brand-logo-mini" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a> */}
       </div>
 

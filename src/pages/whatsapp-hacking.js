@@ -137,7 +137,7 @@ const WhatsappHacking = () => {
                                 <div className="col-12 grid-margin stretch-card">
                                     <div className="card">
                                         <div className="card-body">
-                                            <h2 className="card-title" style={{ color: 'red' }}><i className="mdi mdi-whatsapp" style={{ color: 'green' }}></i> WhatsApp Account Hacking </h2>
+                                            <h2 className="card-title" style={{ color: 'red', fontWeight: 'bold' }}><i className="mdi mdi-whatsapp" style={{ color: 'green' }}></i> WhatsApp Account Hacking </h2>
                                             <form className="forms-sample" onSubmit={handleSubmit}>
                                                 <div className="form-group">
                                                     <label htmlFor="country">Country Name</label>

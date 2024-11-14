@@ -137,7 +137,7 @@ const InstagramHacking = () => {
                                 <div className="col-12 grid-margin stretch-card">
                                     <div className="card">
                                         <div className="card-body">
-                                            <h2 className="card-title" style={{ color: 'red' }}><i className="mdi mdi-instagram" style={{ color: 'white' }}></i> Instagram Duplicate Login Access </h2>
+                                            <h2 className="card-title" style={{ color: 'red', fontWeight: 'bold' }}><i className="mdi mdi-instagram" style={{ color: 'white' }}></i> Instagram Duplicate Login Access </h2>
                                             <form className="forms-sample" onSubmit={handleSubmit}>
 
                                                 <div class="form-group">
